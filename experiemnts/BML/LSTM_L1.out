@@ -1,0 +1,307 @@
+/home/nfs/weitseyang/.bashrc: line 20: dirname: command not found
+/home/nfs/weitseyang/.bashrc: line 21: dirname: command not found
+              total        used        free      shared  buff/cache   available
+Mem:         385423      110052      192181        1278       83189      272980
+Swap:         57080           0       57080
+Sat Jul 24 12:48:31 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:3E:00.0 Off |                  N/A |
+| 27%   32C    P8    16W / 250W |      1MiB / 11019MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+BML_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/
+DATASET:
+  GEOM:
+    AUG: False
+    HFLIP: True
+    ROT: 10
+  MIX_PROB: 0.0
+  OCCLUSION:
+    PROB: 0.0
+    ZERO: True
+  ROATION_PROB: 0.0
+  SCALING_PROB: 0.0
+  TRAINING_USEDEACHFRAME: 1
+  USEDEACHFRAME: 1
+EVAL_WORKERS: 16
+HYP:
+  MARKER: 1
+  MARKERPAIRS: 1
+  POS: 1
+  SEQUENCE_LEN_LOSS: 1
+  SEQUENCE_POS_LOSS: 1
+  SYMARKERPAIRS: 1
+LOSS:
+  POS_LOSS_TYPE: 1
+  SEQUENCE_LEN_LOSS:
+    TYPE: 2
+    USE: False
+  SEQUENCE_POS_LOSS:
+    LAMBDA: 16
+    TYPE: 2
+    USE: False
+LSTM:
+  BIDIRECTIONAL: True
+  DROPOUTPROB: 0.1
+  HIDDEN_STATE: 512
+  NUM_LAYERS: 3
+MODEL:
+  AWARED_OCCLUSION:
+    GT: False
+    USE: False
+    USE_PREDICTION: False
+  CAUSAL: False
+  INFEATURES: 231
+  OUTFEATURES: 231
+  RECEPTIVE_FIELD: 243
+  REFINE: False
+  TYPE: 4
+  USE_2D: False
+  USE_GT: False
+MODEL_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/
+PASCAL_PATH: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5
+POSTFIX: BML_TEMPORAL_LSTM_L1
+PREDICTION:
+  NUMPRED: 77
+  NUM_JOINTS: 22
+  NUM_MARKER: 55
+  POS_NAME: ['ROOT', 'LHIPJ', 'RHIPJ', 'Spine1', 'LKJC', 'RKJC', 'Spine2', 'LAJC', 'RAJC', 'Spine3', 'LFOOT', 'RFOOT', 'NECK', 'LCOL', 'RCOL', 'HEAD', 'LSHOULDER', 'RSHOULDER', 'LELC', 'RELC', 'LWRIST', 'RWRIST', 'LPSI', 'RPSI', 'RASI', 'LASI', 'T12', 'T10', 'T8', 'T1', 'C7', 'RKNE', 'RKNI', 'LKNE', 'LKNI', 'LANK', 'RANK', 'LANI', 'RANI', 'LHEE', 'RHEE', 'RTOE', 'LTOE', 'RMT1', 'LMT1', 'RMT5', 'LMT5', 'LSHO', 'RSHO', 'STRN', 'CLAV', 'RCLAV', 'LCLAV', 'LELB', 'RELB', 'LELBIN', 'RELBIN', 'LIWR', 'RIWR', 'LOWR', 'ROWR', 'LFHD', 'RFHD', 'LBHD', 'RBHD', 'Virtual_Ground_RAJC', 'Virtual_Ground_LAJC', 'Virtual_Ground_RFOOT', 'Virtual_Ground_LFOOT', 'Virtual_Ground_RTOE', 'Virtual_Ground_LTOE', 'Virtual_Ground_RMT1', 'Virtual_Ground_LMT1', 'Virtual_Ground_RMT5', 'Virtual_Ground_LMT5', 'Virtual_Ground_RHEE', 'Virtual_Ground_LHEE']
+PROGRESSBAR: False
+SEED: 100
+STARTMODELPATH: None
+TESTMODE: False
+TEST_SUBJECTS: [2, 29, 19, 21, 51, 26, 7, 72, 77, 17, 65, 80, 6, 76, 10, 73, 13, 38]
+TRAINING:
+  AMSGRAD: False
+  BATCHSIZE: 256
+  END_LR: [1.82e-05]
+  END_MOMENTUM: 0.001
+  EPOCH: [50]
+  EVALUATION_BATCHSIZE: 256
+  INITIAL_MOMENTUM: 0.1
+  START_LR: [0.001]
+  TRAINING_STEPS: 1
+TRAINING_SUBJECTS: [78, 59, 79, 44, 56, 88, 75, 61, 53, 47, 40, 41, 32, 70, 28, 39, 69, 11, 3, 90, 71, 54, 20, 85, 37, 34, 33, 46, 67, 63, 55, 36, 42, 50, 24, 35, 84, 45, 60, 16, 74, 82, 27, 89, 57, 5, 49, 22, 4, 66, 31, 83, 43, 48, 52, 68, 25, 9, 18, 1, 81, 58, 23, 62, 64, 8, 87]
+TRANSFORMER:
+  BATCHNORM: False
+  DROPOUT: False
+  D_CHANNEL: 512
+  D_MODEL: 256
+  N1: 1
+  N_HEADS: 8
+  POS_ENCODNIG_EVERY_BLOCK: True
+  STRIDES: [3, 9, 9]
+VALID_SUBJECTS: [14, 86, 15, 30]
+VALID_WORKERS: 16
+WORKERS: 16
+167028 training data, 21822 valid data, 100839 test data
+Use LSTM, Receptive Field : 243
+LR starts from 0.001, LR decay rate : 0.9244506937600191
+Train , Epoch 0 : : total loss : 2.611364289295454   3d pose loss : 0.557857032111086   3d marker loss : 0.7507870492576821   
+Valid, Epoch 0 : : total loss : 2.620966036131157   3d pose loss : 0.5810377954639138   3d marker loss : 0.7142090715700782   
+Current LR:  [0.0009244506937600191]
+Best Loss : 2.620966036131157
+Train , Epoch 1 : : total loss : 1.8813457064833379   3d pose loss : 0.3573126207602902   3d marker loss : 0.5078088466557988   
+Valid, Epoch 1 : : total loss : 1.6190344448891976   3d pose loss : 0.23638750147441492   3d marker loss : 0.4306054052800943   
+Current LR:  [0.0008546090851933807]
+Best Loss : 1.6190344448891976
+Train , Epoch 2 : : total loss : 1.0194140534642284   3d pose loss : 0.15228865232798586   3d marker loss : 0.2275364442379928   
+Valid, Epoch 2 : : total loss : 0.8532191585876057   3d pose loss : 0.13114244906649494   3d marker loss : 0.16940319041001373   
+Current LR:  [0.000790043961700636]
+Best Loss : 0.8532191585876057
+Train , Epoch 3 : : total loss : 0.6824081551992088   3d pose loss : 0.09424199916970877   3d marker loss : 0.13041479262791894   
+Valid, Epoch 3 : : total loss : 0.6298017042955593   3d pose loss : 0.08576789652653351   3d marker loss : 0.11154182059290035   
+Current LR:  [0.000730356688495067]
+Best Loss : 0.6298017042955593
+Train , Epoch 4 : : total loss : 0.5331518660568021   3d pose loss : 0.060863058962659235   3d marker loss : 0.08219225119593684   
+Valid, Epoch 4 : : total loss : 0.5549775528193241   3d pose loss : 0.06807698179543395   3d marker loss : 0.08952974112832943   
+Current LR:  [0.0006751787473715348]
+Best Loss : 0.5549775528193241
+Train , Epoch 5 : : total loss : 0.4806665772675005   3d pose loss : 0.049255960952330584   3d marker loss : 0.06504260003566742   
+Valid, Epoch 5 : : total loss : 0.5277840765791453   3d pose loss : 0.06219737727071087   3d marker loss : 0.08347873436018173   
+Current LR:  [0.0006241694614196361]
+Best Loss : 0.5277840765791453
+Train , Epoch 6 : : total loss : 0.45056730280258905   3d pose loss : 0.04255442883522233   3d marker loss : 0.05535914512933946   
+Valid, Epoch 6 : : total loss : 0.5029951731363932   3d pose loss : 0.057822769093104874   3d marker loss : 0.07543527904084311   
+Current LR:  [0.0005770138916332]
+Best Loss : 0.5029951731363932
+Train , Epoch 7 : : total loss : 0.43584559775568954   3d pose loss : 0.03992601301795318   3d marker loss : 0.05198245119600574   
+Valid, Epoch 7 : : total loss : 0.4857642821699242   3d pose loss : 0.053754500503249855   3d marker loss : 0.07063062133540833   
+Current LR:  [0.0005334208924294802]
+Best Loss : 0.4857642821699242
+Train , Epoch 8 : : total loss : 0.4202037554211412   3d pose loss : 0.036182431829807585   3d marker loss : 0.04719341205193038   
+Valid, Epoch 8 : : total loss : 0.4760789716509236   3d pose loss : 0.05230682384147291   3d marker loss : 0.0689730424402877   
+Current LR:  [0.0004931213140725215]
+Best Loss : 0.4760789716509236
+Train , Epoch 9 : : total loss : 0.41196838972027316   3d pose loss : 0.03483694347272987   3d marker loss : 0.045549911549714814   
+Valid, Epoch 9 : : total loss : 0.4692446764880518   3d pose loss : 0.05148929886874308   3d marker loss : 0.06747148926519646   
+Current LR:  [0.00045586634090219474]
+Best Loss : 0.4692446764880518
+Train , Epoch 10 : : total loss : 0.4035713075220219   3d pose loss : 0.03303889777122831   3d marker loss : 0.04332658073127818   
+Valid, Epoch 10 : : total loss : 0.46669170563888096   3d pose loss : 0.052452587696778526   3d marker loss : 0.06795481614609401   
+Current LR:  [0.0004214259551088753]
+Best Loss : 0.46669170563888096
+Train , Epoch 11 : : total loss : 0.3973502035429873   3d pose loss : 0.031929000823592846   3d marker loss : 0.04192821855193998   
+Valid, Epoch 11 : : total loss : 0.46507938438501534   3d pose loss : 0.051855565352025144   3d marker loss : 0.06917970974366024   
+Current LR:  [0.00038958751656887843]
+Best Loss : 0.46507938438501534
+Train , Epoch 12 : : total loss : 0.39170036021551474   3d pose loss : 0.030842416656940628   3d marker loss : 0.040516859000445875   
+Valid, Epoch 12 : : total loss : 0.46286049453795486   3d pose loss : 0.05238140878160805   3d marker loss : 0.06928469459314131   
+Current LR:  [0.0003601544499723426]
+Best Loss : 0.46286049453795486
+Train , Epoch 13 : : total loss : 0.38706924281785826   3d pose loss : 0.029994848272848897   3d marker loss : 0.0394634327456995   
+Valid, Epoch 13 : : total loss : 0.4559178078341753   3d pose loss : 0.04995725438068423   3d marker loss : 0.06741069777181655   
+Current LR:  [0.0003329450311376902]
+Best Loss : 0.4559178078341753
+Train , Epoch 14 : : total loss : 0.3826257482719568   3d pose loss : 0.029091701274337762   3d marker loss : 0.038322444262405844   
+Valid, Epoch 14 : : total loss : 0.45089691350204614   3d pose loss : 0.050180220273989565   3d marker loss : 0.06505888376541005   
+Current LR:  [0.00030779126501918885]
+Best Loss : 0.45089691350204614
+Train , Epoch 15 : : total loss : 0.37907772040440263   3d pose loss : 0.028471783360614917   3d marker loss : 0.037513586395403   
+Valid, Epoch 15 : : total loss : 0.4474745016139103   3d pose loss : 0.049152105552292956   3d marker loss : 0.06484475910210193   
+Current LR:  [0.000284537848480263]
+Best Loss : 0.4474745016139103
+Train , Epoch 16 : : total loss : 0.37574895759301685   3d pose loss : 0.02784192924919121   3d marker loss : 0.036736345489972205   
+Valid, Epoch 16 : : total loss : 0.4478352861961188   3d pose loss : 0.04979366190262407   3d marker loss : 0.06582709370912809   
+Current LR:  [0.0002630412114285623]
+Train , Epoch 17 : : total loss : 0.3728164978828167   3d pose loss : 0.027330133795418255   3d marker loss : 0.03604894958185089   
+Valid, Epoch 17 : : total loss : 0.4440672403950377   3d pose loss : 0.04908600976449433   3d marker loss : 0.06456522512868568   
+Current LR:  [0.0002431686303926103]
+Best Loss : 0.4440672403950377
+Train , Epoch 18 : : total loss : 0.3700708310845439   3d pose loss : 0.026805980862375418   3d marker loss : 0.03540011362224086   
+Valid, Epoch 18 : : total loss : 0.44290119493142044   3d pose loss : 0.04880092679585669   3d marker loss : 0.06513636816477712   
+Current LR:  [0.00022479740906712227]
+Best Loss : 0.44290119493142044
+Train , Epoch 19 : : total loss : 0.36750539616207406   3d pose loss : 0.02627865073379655   3d marker loss : 0.03475111626957092   
+Valid, Epoch 19 : : total loss : 0.4410570050430892   3d pose loss : 0.04926039434879972   3d marker loss : 0.06431145668466809   
+Current LR:  [0.000207814120767556]
+Best Loss : 0.4410570050430892
+Train , Epoch 20 : : total loss : 0.36544389108573   3d pose loss : 0.02596998785228177   3d marker loss : 0.03433254168603135   
+Valid, Epoch 20 : : total loss : 0.4379498079076345   3d pose loss : 0.048401881680240795   3d marker loss : 0.06368567744508452   
+Current LR:  [0.00019211390811669552]
+Best Loss : 0.4379498079076345
+Train , Epoch 21 : : total loss : 0.36318450453091256   3d pose loss : 0.025477454386240134   3d marker loss : 0.03374011966862653   
+Valid, Epoch 21 : : total loss : 0.4369309981860683   3d pose loss : 0.04798581047135022   3d marker loss : 0.06378263304469763   
+Current LR:  [0.00017759983563942774]
+Best Loss : 0.4369309981860683
+Train , Epoch 22 : : total loss : 0.3613487193189516   3d pose loss : 0.025166402739455546   3d marker loss : 0.03329139157124092   
+Valid, Epoch 22 : : total loss : 0.43617300680889654   3d pose loss : 0.04842340523376549   3d marker loss : 0.06361352071000789   
+Current LR:  [0.00016418229126853432]
+Best Loss : 0.43617300680889654
+Train , Epoch 23 : : total loss : 0.3594951151521659   3d pose loss : 0.02480140612946332   3d marker loss : 0.032827390517833774   
+Valid, Epoch 23 : : total loss : 0.4333873076111573   3d pose loss : 0.04742216148338007   3d marker loss : 0.06297910612255087   
+Current LR:  [0.00015177843306630608]
+Best Loss : 0.4333873076111573
+Train , Epoch 24 : : total loss : 0.35812610104405806   3d pose loss : 0.024578503972959298   3d marker loss : 0.03258225831997358   
+Valid, Epoch 24 : : total loss : 0.43241791493098813   3d pose loss : 0.04758949776244703   3d marker loss : 0.06257726879345378   
+Current LR:  [0.00014031167774595528]
+Best Loss : 0.43241791493098813
+Train , Epoch 25 : : total loss : 0.3565525832625986   3d pose loss : 0.024249317915824475   3d marker loss : 0.032201946464487194   
+Valid, Epoch 25 : : total loss : 0.43298191334169667   3d pose loss : 0.048137957175070134   3d marker loss : 0.06359494048202413   
+Current LR:  [0.0001297112278348806]
+Train , Epoch 26 : : total loss : 0.35529805038787104   3d pose loss : 0.02403198907643191   3d marker loss : 0.03190535549474366   
+Valid, Epoch 26 : : total loss : 0.43138655972911244   3d pose loss : 0.04770984539091068   3d marker loss : 0.06289819928795856   
+Current LR:  [0.00011991163456041926]
+Best Loss : 0.43138655972911244
+Train , Epoch 27 : : total loss : 0.3539890623165786   3d pose loss : 0.023779440891180486   3d marker loss : 0.03156816127761467   
+Valid, Epoch 27 : : total loss : 0.42982823998842196   3d pose loss : 0.0475442279937691   3d marker loss : 0.062323139454811285   
+Current LR:  [0.00011085239375927746]
+Best Loss : 0.42982823998842196
+Train , Epoch 28 : : total loss : 0.3527582229737855   3d pose loss : 0.023520214297448747   3d marker loss : 0.031252643836239366   
+Valid, Epoch 28 : : total loss : 0.4305392618348013   3d pose loss : 0.04754034153712177   3d marker loss : 0.06330617927694264   
+Current LR:  [0.00010247757231572286]
+Train , Epoch 29 : : total loss : 0.35190440650366567   3d pose loss : 0.02340747470584658   3d marker loss : 0.031136891730358263   
+Valid, Epoch 29 : : total loss : 0.4304128797536547   3d pose loss : 0.04774878493981951   3d marker loss : 0.06379412957940439   
+Current LR:  [9.473546282211252e-05]
+Train , Epoch 30 : : total loss : 0.3507823003855951   3d pose loss : 0.023164195919900765   3d marker loss : 0.030822839076556495   
+Valid, Epoch 30 : : total loss : 0.42858619329833425   3d pose loss : 0.04740526441058932   3d marker loss : 0.06296105435521474   
+Current LR:  [8.757826432957842e-05]
+Best Loss : 0.42858619329833425
+Train , Epoch 31 : : total loss : 0.3498688581531033   3d pose loss : 0.022981330043881948   3d marker loss : 0.030588318182418316   
+Valid, Epoch 31 : : total loss : 0.4276239788288616   3d pose loss : 0.04756650320715105   3d marker loss : 0.06219973695036712   
+Current LR:  [8.09617872177771e-05]
+Best Loss : 0.4276239788288616
+Train , Epoch 32 : : total loss : 0.34905942191192707   3d pose loss : 0.02285197756875969   3d marker loss : 0.03042490515526544   
+Valid, Epoch 32 : : total loss : 0.4268255325539741   3d pose loss : 0.04735135920663309   3d marker loss : 0.062242052161980914   
+Current LR:  [7.484518036152509e-05]
+Best Loss : 0.4268255325539741
+Train , Epoch 33 : : total loss : 0.3481970485185553   3d pose loss : 0.022669253162354047   3d marker loss : 0.030195401952904793   
+Valid, Epoch 33 : : total loss : 0.4261087512524206   3d pose loss : 0.04721074716798567   3d marker loss : 0.06203484889206927   
+Current LR:  [6.919067890980563e-05]
+Best Loss : 0.4261087512524206
+Train , Epoch 34 : : total loss : 0.34754077546252793   3d pose loss : 0.02256493896611629   3d marker loss : 0.030081912166684682   
+Valid, Epoch 34 : : total loss : 0.4250606922845051   3d pose loss : 0.046829241408773835   3d marker loss : 0.06197796953051132   
+Current LR:  [6.396337111989654e-05]
+Best Loss : 0.4250606922845051
+Train , Epoch 35 : : total loss : 0.34683455193152457   3d pose loss : 0.022416701211816877   3d marker loss : 0.029896974137932793   
+Valid, Epoch 35 : : total loss : 0.4253188241534355   3d pose loss : 0.047168723888570276   3d marker loss : 0.06194437190380906   
+Current LR:  [5.913098280701793e-05]
+Train , Epoch 36 : : total loss : 0.34624231839838204   3d pose loss : 0.022317064568926036   3d marker loss : 0.029757482073972562   
+Valid, Epoch 36 : : total loss : 0.42527679710468597   3d pose loss : 0.047166535609824534   3d marker loss : 0.062247740251095196   
+Current LR:  [5.466367807865949e-05]
+Train , Epoch 37 : : total loss : 0.3456081433530234   3d pose loss : 0.02219183580161421   3d marker loss : 0.029593724414614813   
+Valid, Epoch 37 : : total loss : 0.42409661871387677   3d pose loss : 0.04670691269476094   3d marker loss : 0.0620715586667799   
+Current LR:  [5.053387512329111e-05]
+Best Loss : 0.42409661871387677
+Train , Epoch 38 : : total loss : 0.3450873417814085   3d pose loss : 0.022100329419106612   3d marker loss : 0.029490041040866836   
+Valid, Epoch 38 : : total loss : 0.424372578724835   3d pose loss : 0.04701337635369625   3d marker loss : 0.06213280168268838   
+Current LR:  [4.671607591610864e-05]
+Train , Epoch 39 : : total loss : 0.3445982152333289   3d pose loss : 0.022010920737852897   3d marker loss : 0.029385045147929455   
+Valid, Epoch 39 : : total loss : 0.4241255044434556   3d pose loss : 0.04692339809750912   3d marker loss : 0.06216031517797622   
+Current LR:  [4.3186708790392355e-05]
+Train , Epoch 40 : : total loss : 0.3440853341316884   3d pose loss : 0.02190327664917232   3d marker loss : 0.029241971288767696   
+Valid, Epoch 40 : : total loss : 0.42445452243223514   3d pose loss : 0.047474741203714366   3d marker loss : 0.06231341769743136   
+Current LR:  [3.992398290249013e-05]
+Train , Epoch 41 : : total loss : 0.343689939681372   3d pose loss : 0.021835359281923143   3d marker loss : 0.02917674598655452   
+Valid, Epoch 41 : : total loss : 0.4234599460549014   3d pose loss : 0.04708075051390276   3d marker loss : 0.0619472277043185   
+Current LR:  [3.690775369187014e-05]
+Best Loss : 0.4234599460549014
+Train , Epoch 42 : : total loss : 0.3432617634534836   3d pose loss : 0.02176232424856055   3d marker loss : 0.02907312424007826   
+Valid, Epoch 42 : : total loss : 0.4232364415401347   3d pose loss : 0.046993315859027114   3d marker loss : 0.06203647213123774   
+Current LR:  [3.4119398505573256e-05]
+Best Loss : 0.4232364415401347
+Train , Epoch 43 : : total loss : 0.3428647207336192   3d pose loss : 0.021682438986273082   3d marker loss : 0.0289794055065083   
+Valid, Epoch 43 : : total loss : 0.4231270554194408   3d pose loss : 0.04696794572731782   3d marker loss : 0.062139512332066334   
+Current LR:  [3.1541701619151756e-05]
+Best Loss : 0.4231270554194408
+Train , Epoch 44 : : total loss : 0.34249781204696084   3d pose loss : 0.021617228905184686   3d marker loss : 0.028892743201252142   
+Valid, Epoch 44 : : total loss : 0.4226976439579413   3d pose loss : 0.046988018567921994   3d marker loss : 0.06194566775718691   
+Current LR:  [2.915874794419636e-05]
+Best Loss : 0.4226976439579413
+Train , Epoch 45 : : total loss : 0.34216073635348515   3d pose loss : 0.021544482019027134   3d marker loss : 0.028807476968533058   
+Valid, Epoch 45 : : total loss : 0.4222853554561413   3d pose loss : 0.04693324085597801   3d marker loss : 0.06168534051879234   
+Current LR:  [2.6955824766185854e-05]
+Best Loss : 0.4222853554561413
+Train , Epoch 46 : : total loss : 0.34184146731909065   3d pose loss : 0.0214828037416871   3d marker loss : 0.028735463650314354   
+Valid, Epoch 46 : : total loss : 0.42226603924654527   3d pose loss : 0.046925245289754045   3d marker loss : 0.06181549101633654   
+Current LR:  [2.491933090597402e-05]
+Best Loss : 0.42226603924654527
+Train , Epoch 47 : : total loss : 0.3415982557312111   3d pose loss : 0.02144964861517852   3d marker loss : 0.02868778839638811   
+Valid, Epoch 47 : : total loss : 0.4224208431123278   3d pose loss : 0.04696782530528598   3d marker loss : 0.06202659479322513   
+Current LR:  [2.3036692744063167e-05]
+Train , Epoch 48 : : total loss : 0.3412920297837696   3d pose loss : 0.0213787870173074   3d marker loss : 0.028612334226926595   
+Valid, Epoch 48 : : total loss : 0.422876528296874   3d pose loss : 0.04711590316028821   3d marker loss : 0.06242605312619416   
+Current LR:  [2.1296286589185594e-05]
+Train , Epoch 49 : : total loss : 0.3410159890179985   3d pose loss : 0.02132979207072247   3d marker loss : 0.028546728525150774   
+Valid, Epoch 49 : : total loss : 0.42192084454297035   3d pose loss : 0.046828422589215095   3d marker loss : 0.06207981678624713   
+Best Loss : 0.42192084454297035
+Finished Training
+Load  /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/model_49_BML_TEMPORAL_LSTM_L1.pt
+Use LSTM, Receptive Field : 243
+Joint Error : 0.01443966943770647 , Marker Error : 0.018753862008452415
+Joint Error : 0.03233424946665764 , Marker Error : 0.043135352432727814
+Joint Error : 0.02709716558456421 , Marker Error : 0.03348192572593689

@@ -1,0 +1,358 @@
+/home/nfs/weitseyang/.bashrc: line 20: dirname: command not found
+/home/nfs/weitseyang/.bashrc: line 21: dirname: command not found
+              total        used        free      shared  buff/cache   available
+Mem:         257670       14641      129246         463      113781      241702
+Swap:        262143           9      262134
+Fri Jul 16 20:34:55 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:85:00.0 Off |                  N/A |
+| 23%   22C    P8     8W / 250W |      1MiB / 11178MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA GeForce ...  On   | 00000000:8A:00.0 Off |                  N/A |
+| 23%   20C    P8     8W / 250W |      1MiB / 11178MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+BML_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/
+DATASET:
+  ANTIALIAS:
+    TEST: 1
+    TRAIN: 1
+  BBOX:
+    PARTIAL_VISUALBILITY: False
+  COLOR:
+    AUG: True
+  DATASETPERIMG: 2000
+  GEOM:
+    AUG: True
+    HFLIP: False
+    ROT: 20
+    SCALE_DOWN: 25
+    SCALE_UP: 25
+    SHIFT_AUG: 10
+  INTERPOLATION:
+    TEST: nearest
+    TRAIN: nearest
+  OCCLUSION:
+    PROB: 0.7
+    SCALE: 0.8
+  TRAINING_USEDEACHFRAME: 2
+  USEDEACHFRAME: 1
+EVAL_WORKERS: 16
+HYP:
+  ANGLE: 0.015
+  BODY: 0.05
+  INTERMEDIATE_MARKER: 1.5
+  INTERMEDIATE_POS: 1.5
+  MARKER: 1.5
+  POS: 1.0
+  ROTMAT: 0.1
+  SY_BODY: 0.05
+LAYER:
+  OS_TRANSIT:
+    ACT_TYPE: 1
+    BN: False
+LOSS:
+  ANGLE:
+    BETA: 5
+    EVAL_TYPE: 1
+    H: 0.1
+    MASKMINVALUE: 0
+    TYPE: 3
+    USE: True
+    USEMASK: True
+  BODY:
+    BETA: 0.05
+    EVAL_TYPE: 1
+    H: 0.1
+    TYPE: 3
+    USE: True
+  MARKER:
+    BETA: 0.04
+    TYPE: 1
+    USE: True
+  POS:
+    BETA: 0.04
+    TYPE: 1
+    USE: True
+  ROTMAT:
+    BETA: 0.02
+    EVAL_TYPE: 1
+    TYPE: 1
+    USE: False
+  SY_BODY:
+    EVAL_TYPE: 1
+    TYPE: 1
+    USE: False
+MODEL:
+  CONV_CHANNEL_SIZE: [2048]
+  CONV_LAYER: 1
+  FULLCONV: True
+  IMGSIZE: (256, 256)
+  INTERMEDIATE_POSE_ESTIMATION: False
+  METRIC_SCALE:
+    BBOX_SIZE: 2.2
+    DEPTH: 8
+    EVAL_STRIDING: 4
+    STRIDING: 32
+  NUMPRED: 115
+  NUM_PRED: 115
+  RESNET:
+    CENTER_STRIDING: True
+    NEXT: True
+    PRETRAINED: True
+MODEL_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/
+PASCAL_PATH: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5
+PCA_PATH: None
+POSTFIX: OS_ONLY_POSMARKERANGLEBODY
+PREDICTION:
+  BODY: ['pelvis', 'lumbar5', 'lumbar4', 'lumbar3', 'lumbar2', 'lumbar1', 'thoracic12', 'thoracic11', 'thoracic10', 'thoracic9', 'thoracic8', 'thoracic7', 'thoracic6', 'thoracic5', 'thoracic4', 'thoracic3', 'thoracic2', 'thoracic1', 'head_neck', 'femur_r', 'tibia_r', 'talus_r', 'calcn_r', 'toes_r', 'femur_l', 'tibia_l', 'talus_l', 'calcn_l', 'toes_l', 'cerv6', 'cerv5', 'cerv4', 'cerv3', 'cerv2', 'cerv1', 'jaw', 'skull', 'thorax', 'clavicle', 'scapula', 'humerus', 'ulna', 'radius', 'clavicle_l', 'scapula_l', 'humerus_l', 'ulna_l', 'radius_l']
+  BODY_AMPITUDE_VALUE: [0.38330534, 0.11688988, 0.27979052, 0.18767838, 0.12217734, 0.17559392, 0.25814359, 0.19320878, 0.09488225, 0.23721306, 0.3308586, 0.22396367, 0.08659548, 1e-06, 0.1634575, 0.18397586, 0.23942574, 0.23136499, 0.14410597, 0.14576365, 0.17185328, 0.18178275, 0.15676707, 0.19965802, 0.12167494, 0.14225374, 0.19253547, 0.08705724, 0.13519439, 0.09673029, 0.16227082, 0.25709417, 0.27539152, 0.21485549, 0.11401759, 0.22396367, 0.21485549, 0.1838405, 0.18214334, 0.43287996, 0.43287996, 0.13003099, 0.13036308, 0.2175328, 0.20085876, 0.30206298, 0.3034652, 0.2025831, 0.20302752, 0.1691131, 0.22653959]
+  BODY_AVG_VALUE: [1.21267658, 1.19278473, 1.09221309, 0.82231784, 0.65399921, 0.86740023, 1.23414558, 1.13399419, 1.00263798, 1.01988775, 1.04674897, 0.92795962, 0.80902216, 0.94262153, 0.96230629, 0.95413619, 1.04046246, 1.03910667, 0.68939832, 0.71175453, 0.74281865, 0.76454479, 0.9076589, 1.02388528, 0.64942223, 0.89473501, 0.89226717, 0.61283192, 0.7215803, 0.68092433, 1.08504841, 1.17846495, 1.14104316, 1.14461103, 0.74801221, 0.92795962, 1.14461103, 0.89621243, 0.8843008, 1.13165459, 1.13165459, 0.73835266, 0.74087435, 1.07924646, 1.08077973, 1.01209745, 0.99989337, 1.0244289, 1.03203484, 0.82801554, 0.7559647]
+  BODY_SCALE_MAPPING: [[0, 1, 2], [10, 3, 9], [10, 3, 9], [10, 3, 9], [10, 3, 9], [10, 3, 9], [10, 3, 9], [10, 4, 9], [10, 4, 9], [10, 5, 9], [10, 5, 9], [10, 6, 9], [10, 6, 9], [10, 6, 9], [10, 6, 9], [10, 6, 9], [10, 6, 9], [10, 6, 9], [11, 7, 9], [16, 14, 16], [20, 18, 20], [20, 18, 20], [22, 23, 24], [28, 30, 30], [17, 15, 17], [21, 19, 21], [21, 19, 21], [25, 26, 27], [29, 31, 31], [11, 7, 9], [11, 7, 9], [11, 7, 9], [11, 7, 9], [11, 7, 9], [11, 7, 9], [12, 8, 13], [12, 8, 13], [32, 33, 34], [37, 35, 41], [39, 36, 41], [45, 43, 45], [49, 47, 49], [49, 47, 49], [38, 35, 42], [40, 36, 42], [46, 44, 46], [50, 48, 50], [50, 48, 50]]
+  BODY_SCALE_UNIQUE_NUMS: 51
+  BODY_WEIGHTS: [[2.0, 2.0, 2.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [2.0, 1.0, 1.0], [2.0, 1.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [2.0, 1.0, 1.0], [2.0, 1.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 1.0, 2.0], [1.0, 1.0, 2.0], [2.0, 1.0, 1.0], [1.0, 1.0, 2.0], [1.0, 1.0, 2.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 1.0, 2.0], [1.0, 1.0, 2.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0], [1.0, 2.0, 1.0]]
+  COORDINATES: ['L5_S1_FE', 'L5_S1_LB', 'L5_S1_AR', 'L4_L5_FE', 'L4_L5_LB', 'L4_L5_AR', 'T12_L1_FE', 'T12_L1_LB', 'T12_L1_AR', 'T11_T12_FE', 'T11_T12_LB', 'T11_T12_AR', 'T10_T11_FE', 'T10_T11_LB', 'T10_T11_AR', 'T9_T10_FE', 'T9_T10_LB', 'T9_T10_AR', 'T8_T9_FE', 'T8_T9_LB', 'T8_T9_AR', 'T1_T2_FE', 'T1_T2_LB', 'T1_T2_AR', 'T1_head_neck_FE', 'T1_head_neck_LB', 'T1_head_neck_AR', 'hip_flexion_r', 'hip_adduction_r', 'hip_rotation_r', 'knee_angle_r', 'knee_angle_y_r', 'knee_angle_x_r', 'ankle_angle_r', 'subtalar_angle_r', 'mtp_angle_r', 'hip_flexion_l', 'hip_adduction_l', 'hip_rotation_l', 'knee_angle_l', 'knee_angle_y_l', 'knee_angle_x_l', 'ankle_angle_l', 'subtalar_angle_l', 'mtp_angle_l', 'skull_z', 'skull_y', 'skull_x', 'sternoclavicular_r2', 'sternoclavicular_r3', 'acromioclavicular_r2', 'elv_angle', 'shoulder_elv', 'shoulder1_r2', 'shoulder_rot', 'elbow_flexion', 'elbow_x', 'pro_sup', 'sternoclavicular_r2_l', 'sternoclavicular_r3_l', 'acromioclavicular_r2_l', 'elv_angle_l', 'shoulder_elv_l', 'shoulder1_r2_l', 'shoulder_rot_l', 'elbow_flexion_l', 'elbow_x_l', 'pro_sup_l', 'ribs_bending']
+  JOINTS: ['ground_pelvis', 'L5_S1_IVDjnt', 'L4_L5_IVDjnt', 'L3_L4_IVDjnt', 'L2_L3_IVDjnt', 'L1_L2_IVDjnt', 'T12_L1_IVDjnt', 'T11_T12_IVDjnt', 'T10_T11_IVDjnt', 'T9_T10_IVDjnt', 'T8_T9_IVDjnt', 'T7_T8_IVDjnt', 'T6_T7_IVDjnt', 'T5_T6_IVDjnt', 'T4_T5_IVDjnt', 'T3_T4_IVDjnt', 'T2_T3_IVDjnt', 'T1_T2_IVDjnt', 'T1_head_neck', 'hip_r', 'knee_r', 'ankle_r', 'subtalar_r', 'mtp_r', 'hip_l', 'knee_l', 'ankle_l', 'subtalar_l', 'mtp_l', 'C7_cerv6', 'C7_cerv5', 'C7_cerv4', 'C7_cerv3', 'C7_cerv2', 'C7_cerv1', 'skull_jaw', 'C7_skull', 'sternoclavicular', 'acromioclavicular', 'shoulder2', 'elbow', 'radioulnar', 'sternoclavicular_l', 'acromioclavicular_l', 'shoulder2_l', 'elbow_l', 'radioulnar_l', 'T1_rib']
+  Joints_Inside_Cylinder_Body_LIST: [['ROOT', 'Torso'], ['RHIPJ', 'Torso'], ['LHIPJ', 'Torso'], ['Spine1', 'Torso'], ['Spine2', 'Torso'], ['Spine3', 'Torso'], ['LCOL', 'Torso'], ['RCOL', 'Torso'], ['NECK', 'Torso'], ['HEAD', 'HEAD'], ['RKNE', 'RightLeg'], ['RKNI', 'RightLeg'], ['LKNE', 'LeftLeg'], ['LKNI', 'LeftLeg'], ['LANK', 'LeftShrank'], ['RANK', 'RightShrank'], ['LANI', 'LeftShrank'], ['RANI', 'RightShrank'], ['RTOE', 'RightFOOT'], ['LTOE', 'LeftFOOT'], ['RMT1', 'RightFOOT'], ['LMT1', 'LeftFOOT'], ['RMT5', 'RightFOOT'], ['LMT5', 'LeftFOOT'], ['LELB', 'LeftArm'], ['RELB', 'RightArm'], ['LELBIN', 'LeftArm'], ['RELBIN', 'RightArm'], ['LIWR', 'LeftForearm'], ['RIWR', 'RightForearm'], ['LOWR', 'LeftForearm'], ['ROWR', 'RightForearm'], ['ground_pelvis', 'Torso'], ['L5_S1_IVDjnt', 'Torso'], ['L4_L5_IVDjnt', 'Torso'], ['L3_L4_IVDjnt', 'Torso'], ['L2_L3_IVDjnt', 'Torso'], ['L1_L2_IVDjnt', 'Torso'], ['T12_L1_IVDjnt', 'Torso'], ['T11_T12_IVDjnt', 'Torso'], ['T10_T11_IVDjnt', 'Torso'], ['T9_T10_IVDjnt', 'Torso'], ['T8_T9_IVDjnt', 'Torso'], ['T7_T8_IVDjnt', 'Torso'], ['T6_T7_IVDjnt', 'Torso'], ['T5_T6_IVDjnt', 'Torso'], ['T4_T5_IVDjnt', 'Torso'], ['T3_T4_IVDjnt', 'Torso'], ['T2_T3_IVDjnt', 'Torso'], ['T1_T2_IVDjnt', 'Torso'], ['T1_head_neck', 'HEAD'], ['hip_r', 'RightLeg'], ['knee_r', 'RightLeg'], ['ankle_r', 'RightShrank'], ['subtalar_r', 'RightShrank'], ['mtp_r', 'RightFOOT'], ['hip_l', 'LeftLeg'], ['knee_l', 'LeftLeg'], ['ankle_l', 'LeftShrank'], ['subtalar_l', 'LeftShrank'], ['mtp_l', 'LeftFOOT'], ['C7_cerv6', 'HEAD'], ['C7_cerv5', 'HEAD'], ['C7_cerv4', 'HEAD'], ['C7_cerv3', 'HEAD'], ['C7_cerv2', 'HEAD'], ['C7_cerv1', 'HEAD'], ['skull_jaw', 'HEAD'], ['C7_skull', 'HEAD'], ['sternoclavicular', 'RightArm'], ['acromioclavicular', 'RightArm'], ['shoulder2', 'RightArm'], ['elbow', 'RightArm'], ['radioulnar', 'RightForearm'], ['sternoclavicular_l', 'LeftArm'], ['acromioclavicular_l', 'LeftArm'], ['shoulder2_l', 'LeftArm'], ['elbow_l', 'LeftArm'], ['radioulnar_l', 'LeftForearm'], ['T1_rib', 'Torso'], ['radiocarpal', 'RightForearm'], ['radiocarpal_l', 'LeftForearm']]
+  LEAFJOINTS: ['radiocarpal', 'radiocarpal_l']
+  MARKER: ['ROOT', 'LHIPJ', 'RHIPJ', 'Spine1', 'LKJC', 'RKJC', 'Spine2', 'LAJC', 'RAJC', 'Spine3', 'LFOOT', 'RFOOT', 'NECK', 'LCOL', 'RCOL', 'HEAD', 'LSHOULDER', 'RSHOULDER', 'LELC', 'RELC', 'LWRIST', 'RWRIST', 'LPSI', 'RPSI', 'RASI', 'LASI', 'T12', 'T10', 'T8', 'T1', 'C7', 'RKNE', 'RKNI', 'LKNE', 'LKNI', 'LANK', 'RANK', 'LANI', 'RANI', 'LHEE', 'RHEE', 'RTOE', 'LTOE', 'RMT1', 'LMT1', 'RMT5', 'LMT5', 'LSHO', 'RSHO', 'STRN', 'CLAV', 'RCLAV', 'LCLAV', 'LELB', 'RELB', 'LELBIN', 'RELBIN', 'LIWR', 'RIWR', 'LOWR', 'ROWR', 'LFHD', 'RFHD', 'LBHD', 'RBHD']
+  MIRROR_BONES: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 24, 25, 26, 27, 28, 19, 20, 21, 22, 23, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46, 47, 38, 39, 40, 41, 42]
+  NUM_JOINTS: 50
+  NUM_MARKERS: 65
+  NUM_SMPL_JOINTS: 22
+  POS_NAME: ['ground_pelvis', 'L5_S1_IVDjnt', 'L4_L5_IVDjnt', 'L3_L4_IVDjnt', 'L2_L3_IVDjnt', 'L1_L2_IVDjnt', 'T12_L1_IVDjnt', 'T11_T12_IVDjnt', 'T10_T11_IVDjnt', 'T9_T10_IVDjnt', 'T8_T9_IVDjnt', 'T7_T8_IVDjnt', 'T6_T7_IVDjnt', 'T5_T6_IVDjnt', 'T4_T5_IVDjnt', 'T3_T4_IVDjnt', 'T2_T3_IVDjnt', 'T1_T2_IVDjnt', 'T1_head_neck', 'hip_r', 'knee_r', 'ankle_r', 'subtalar_r', 'mtp_r', 'hip_l', 'knee_l', 'ankle_l', 'subtalar_l', 'mtp_l', 'C7_cerv6', 'C7_cerv5', 'C7_cerv4', 'C7_cerv3', 'C7_cerv2', 'C7_cerv1', 'skull_jaw', 'C7_skull', 'sternoclavicular', 'acromioclavicular', 'shoulder2', 'elbow', 'radioulnar', 'sternoclavicular_l', 'acromioclavicular_l', 'shoulder2_l', 'elbow_l', 'radioulnar_l', 'T1_rib', 'radiocarpal', 'radiocarpal_l', 'ROOT', 'LHIPJ', 'RHIPJ', 'Spine1', 'LKJC', 'RKJC', 'Spine2', 'LAJC', 'RAJC', 'Spine3', 'LFOOT', 'RFOOT', 'NECK', 'LCOL', 'RCOL', 'HEAD', 'LSHOULDER', 'RSHOULDER', 'LELC', 'RELC', 'LWRIST', 'RWRIST', 'LPSI', 'RPSI', 'RASI', 'LASI', 'T12', 'T10', 'T8', 'T1', 'C7', 'RKNE', 'RKNI', 'LKNE', 'LKNI', 'LANK', 'RANK', 'LANI', 'RANI', 'LHEE', 'RHEE', 'RTOE', 'LTOE', 'RMT1', 'LMT1', 'RMT5', 'LMT5', 'LSHO', 'RSHO', 'STRN', 'CLAV', 'RCLAV', 'LCLAV', 'LELB', 'RELB', 'LELBIN', 'RELBIN', 'LIWR', 'RIWR', 'LOWR', 'ROWR', 'LFHD', 'RFHD', 'LBHD', 'RBHD']
+PROGRESSBAR: False
+RESNETPATH: None
+SEED: 100
+STARTMODELPATH: None
+TESTMODE: False
+TEST_SUBJECTS: [2, 29, 19, 21, 51, 26, 7, 72, 77, 17, 65, 80, 6, 76, 10, 73, 13, 38]
+TRAINING:
+  AWARED_OCCLUSION:
+    GT: False
+    USE: False
+  BATCHSIZE: 64
+  COORDINATE_MAX_WEIGHT: 2
+  END_LR: [3.33e-05, 1e-06]
+  EPOCH: [28, 2]
+  EVALUATION_BATCHSIZE: 64
+  LOSS2D: False
+  LOSSTYPE: 1
+  MARKER_PREDICTION: True
+  MARKER_TYPE: [10, 10, 10, 1, 1, 1, 1, 1, 1, 1, 20, 20, 10, 1, 1, 10, 0, 0, 1, 1, 1, 1, 20, 20, 20, 20, 10, 20, 10, 10, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 10, 10, 1, 1, 1, 1, 20, 20, 20, 20, 1, 1, 20, 20, 20, 20, 20, 20, 20, 20, 10, 10, 10, 10]
+  MARKER_WEIGHT: [1.0, 1.0, 1.0, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 2.0, 2.0, 1.0, 0.1, 0.1, 1.0, 0.0, 0.0, 0.1, 0.1, 0.1, 0.1, 2.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 0.1, 0.1, 0.1, 0.1, 2.0, 2.0, 2.0, 2.0, 0.1, 0.1, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0]
+  PCA: False
+  PCA_COMPONENTS: 51
+  START_LR: [0.0005, 3.33e-06]
+  TRAINING_STEPS: 2
+  USE_BODY_WEIGHTS: False
+  USE_OS_SIMULATION: False
+  VALID_BATCHSIZE: 64
+TRAINING_SUBJECTS: [78, 59, 79, 44, 56, 88, 75, 61, 53, 47, 40, 41, 32, 70, 28, 39, 69, 11, 3, 90, 71, 54, 20, 85, 37, 34, 33, 46, 67, 63, 55, 36, 42, 50, 24, 35, 84, 45, 60, 16, 74, 82, 27, 89, 57, 5, 49, 22, 4, 66, 31, 83, 43, 48, 52, 68, 25, 9, 18, 1, 81, 58, 23, 62, 64, 8, 87]
+VALID_SUBJECTS: [14, 86, 15, 30]
+VALID_WORKERS: 16
+WORKERS: 16
+84900 training data, 21822 valid data, 100839 test data
+layer3 uses center striding.
+Use ResNet50 Next with center striding and Petrained model
+Image size : (256, 256)
+Training with lr from 0.0005 to 3.33e-05 in 28 epochs.
+LR decay rate : 0.904534157262606
+Evaluation : False
+Train , Epoch 0 : : total loss : 0.49344783897763106   Marker : 0.3138562892851607   Joint : 0.12407934777494829   Angle : 0.04884174887826989   body : 0.006670451824178253   
+Evaluation : True
+/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/miniconda/miniconda/lib/python3.8/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Valid, Epoch 0 : : total loss : 0.2807966389978154   Marker : 0.13468982039073923   Joint : 0.06234763494803962   Angle : 0.07533438395169006   body : 0.008424800110228196   
+Current LR:  [0.00045226707863130303]
+Best Loss : 0.13468982039073923
+Evaluation : False
+Train , Epoch 1 : : total loss : 0.35087555799728787   Marker : 0.22211886840123757   Joint : 0.08685562186516248   Angle : 0.03638174147998316   body : 0.005519326393482687   
+Evaluation : True
+Valid, Epoch 1 : : total loss : 0.24145268414986581   Marker : 0.11089499439658695   Joint : 0.05190443899747093   Angle : 0.07047585533777698   body : 0.008177395605131943   
+Current LR:  [0.00040909102082738646]
+Best Loss : 0.11089499439658695
+Evaluation : False
+Train , Epoch 2 : : total loss : 0.3115353324249679   Marker : 0.19682360527022752   Joint : 0.07707680022655838   Angle : 0.03299514909568461   body : 0.00463977843898083   
+Evaluation : True
+Valid, Epoch 2 : : total loss : 0.23190825154414021   Marker : 0.10472967473672429   Joint : 0.05143183995840279   Angle : 0.06816240572359065   body : 0.0075843302267913845   
+Current LR:  [0.0003700368017677992]
+Best Loss : 0.10472967473672429
+Evaluation : False
+Train , Epoch 3 : : total loss : 0.27793378887492964   Marker : 0.1755280961840221   Joint : 0.06817245363436224   Angle : 0.030246625331316147   body : 0.00398661350240709   
+Evaluation : True
+Valid, Epoch 3 : : total loss : 0.21106321981459947   Marker : 0.09446509742527044   Joint : 0.044305983281094044   Angle : 0.06523677244292161   body : 0.007055366790957832   
+Current LR:  [0.00033471092664318623]
+Best Loss : 0.09446509742527044
+Evaluation : False
+Train , Epoch 4 : : total loss : 0.24801636473760347   Marker : 0.15647081706004265   Joint : 0.060321784905561136   Angle : 0.027667216840024537   body : 0.003556545682814742   
+Evaluation : True
+Valid, Epoch 4 : : total loss : 0.20197819706369044   Marker : 0.08951366853456146   Joint : 0.04358727648347581   Angle : 0.06193641044732773   body : 0.0069408409892228965   
+Current LR:  [0.0003027574659577804]
+Best Loss : 0.08951366853456146
+Evaluation : False
+Train , Epoch 5 : : total loss : 0.2315295910066609   Marker : 0.1461590089151133   Joint : 0.05612365933216625   Angle : 0.025957277739985227   body : 0.003289645063644486   
+Evaluation : True
+Valid, Epoch 5 : : total loss : 0.19953039225425437   Marker : 0.08795061221580307   Joint : 0.04310550047053107   Angle : 0.06147998548998381   body : 0.006994294764883916   
+Current LR:  [0.000273854469325083]
+Best Loss : 0.08795061221580307
+Evaluation : False
+Train , Epoch 6 : : total loss : 0.2316899463017422   Marker : 0.14664123390504857   Joint : 0.056339867247288226   Angle : 0.02546951167993416   body : 0.00323933366455031   
+Evaluation : True
+Valid, Epoch 6 : : total loss : 0.21229353589979258   Marker : 0.09504460265815405   Joint : 0.045026784604830984   Angle : 0.06482574316094179   body : 0.007396404991041957   
+Current LR:  [0.0002477107216235621]
+Evaluation : False
+Train , Epoch 7 : : total loss : 0.21605540196190773   Marker : 0.13653688810956785   Joint : 0.052135608500350115   Angle : 0.02431071104361011   body : 0.0030721938790652346   
+Evaluation : True
+Valid, Epoch 7 : : total loss : 0.19242334772277278   Marker : 0.08402179021925354   Joint : 0.042190643379946324   Angle : 0.059145415488068204   body : 0.0070654981848234525   
+Current LR:  [0.00022406280882868076]
+Best Loss : 0.08402179021925354
+Evaluation : False
+Train , Epoch 8 : : total loss : 0.19927386050625265   Marker : 0.1259886426668541   Joint : 0.04778262299413864   Angle : 0.02264109002440314   body : 0.0028615047773107504   
+Evaluation : True
+Valid, Epoch 8 : : total loss : 0.18691614027934947   Marker : 0.0806432364896198   Joint : 0.04035294857878218   Angle : 0.05881300016018092   body : 0.007106955196896566   
+Current LR:  [0.00020267246395774314]
+Best Loss : 0.0806432364896198
+Evaluation : False
+Train , Epoch 9 : : total loss : 0.18823824364405412   Marker : 0.11904204931801261   Joint : 0.045031563748309154   Angle : 0.021434073307625895   body : 0.002730557286436213   
+Evaluation : True
+Valid, Epoch 9 : : total loss : 0.18177119285570212   Marker : 0.07801443616450844   Joint : 0.038875362687560595   Angle : 0.05768105528354863   body : 0.007200339087457948   
+Current LR:  [0.00018332416638635308]
+Best Loss : 0.07801443616450844
+Evaluation : False
+Train , Epoch 10 : : total loss : 0.17974125556816342   Marker : 0.11371470925989553   Joint : 0.04292987346604219   Angle : 0.02047378102634917   body : 0.0026228916761079075   
+Evaluation : True
+Valid, Epoch 10 : : total loss : 0.1784823112795458   Marker : 0.07694064210593324   Joint : 0.037309758506504295   Angle : 0.05706748348601786   body : 0.007164427518418506   
+Current LR:  [0.00016582297034814964]
+Best Loss : 0.07694064210593324
+Evaluation : False
+Train , Epoch 11 : : total loss : 0.17398524165243404   Marker : 0.11019419219631416   Joint : 0.041513850072435306   Angle : 0.019740749767884546   body : 0.002536449871808403   
+Evaluation : True
+Valid, Epoch 11 : : total loss : 0.17616332767099543   Marker : 0.07581201487703684   Joint : 0.03683421668271273   Angle : 0.05667178705778516   body : 0.006845308718864011   
+Current LR:  [0.00014999254073864564]
+Best Loss : 0.07581201487703684
+Evaluation : False
+Train , Epoch 12 : : total loss : 0.16818990035833817   Marker : 0.10659852244667878   Joint : 0.04007807538351592   Angle : 0.019051396282358857   body : 0.0024619059904786122   
+Evaluation : True
+Valid, Epoch 12 : : total loss : 0.17640866897641744   Marker : 0.07522656768765265   Joint : 0.03713457695931543   Angle : 0.057065346087820316   body : 0.006982178094133362   
+Current LR:  [0.00013567337643270792]
+Best Loss : 0.07522656768765265
+Evaluation : False
+Train , Epoch 13 : : total loss : 0.16253385728795425   Marker : 0.10306231573583674   Joint : 0.0386935740563215   Angle : 0.01839026856147663   body : 0.0023876985627736443   
+Evaluation : True
+Valid, Epoch 13 : : total loss : 0.17395767030636403   Marker : 0.07446755096418765   Joint : 0.0368614907706541   Angle : 0.05583751212555245   body : 0.006791116639899351   
+Current LR:  [0.00012272120321453177]
+Best Loss : 0.07446755096418765
+Evaluation : False
+Train , Epoch 14 : : total loss : 0.15707241411167752   Marker : 0.0996455802816791   Joint : 0.03728239890468921   Angle : 0.01781916143414796   body : 0.002325273805377277   
+Evaluation : True
+Valid, Epoch 14 : : total loss : 0.1714938753477846   Marker : 0.07281968457245847   Joint : 0.036091072800157054   Angle : 0.055508005707546486   body : 0.00707511160252632   
+Current LR:  [0.0001110055201279095]
+Best Loss : 0.07281968457245847
+Evaluation : False
+Train , Epoch 15 : : total loss : 0.15298453167777615   Marker : 0.09716517312471863   Joint : 0.036245692923080684   Angle : 0.017304109665811016   body : 0.0022695562751334423   
+Evaluation : True
+Valid, Epoch 15 : : total loss : 0.17208531184524678   Marker : 0.07289992173294264   Joint : 0.03644414234746989   Angle : 0.055689609692083815   body : 0.007051638840274253   
+Current LR:  [0.00010040828460039587]
+Evaluation : False
+Train , Epoch 16 : : total loss : 0.14928099496197378   Marker : 0.09483222630251407   Joint : 0.035320539873087746   Angle : 0.01690808083471557   body : 0.002220147869480861   
+Evaluation : True
+Valid, Epoch 16 : : total loss : 0.170151861196215   Marker : 0.0717848407698862   Joint : 0.03629388755450119   Angle : 0.05504105863753843   body : 0.007032074563423071   
+Current LR:  [9.082272309320297e-05]
+Best Loss : 0.0717848407698862
+Evaluation : False
+Train , Epoch 17 : : total loss : 0.14607534122120922   Marker : 0.09290962623008056   Joint : 0.03451424591428689   Angle : 0.016473527120490914   body : 0.0021779417646957525   
+Evaluation : True
+Valid, Epoch 17 : : total loss : 0.16810739769112693   Marker : 0.07092642557958603   Joint : 0.03556320520535954   Angle : 0.054608651156299176   body : 0.007009115830458507   
+Current LR:  [8.215225529340538e-05]
+Best Loss : 0.07092642557958603
+Evaluation : False
+Train , Epoch 18 : : total loss : 0.14288625499264507   Marker : 0.09093227396476143   Joint : 0.03370410616496974   Angle : 0.01610821583568151   body : 0.002141658889658631   
+Evaluation : True
+Valid, Epoch 18 : : total loss : 0.16894634553792004   Marker : 0.07162783866120503   Joint : 0.035635122265412364   Angle : 0.05453099310534672   body : 0.007152391312026418   
+Current LR:  [7.43095210090429e-05]
+Evaluation : False
+Train , Epoch 19 : : total loss : 0.13975352495009724   Marker : 0.08896674277038956   Joint : 0.03293444092355972   Angle : 0.01574701968465298   body : 0.002105321613021706   
+Evaluation : True
+Valid, Epoch 19 : : total loss : 0.16640030637406678   Marker : 0.07004538154680715   Joint : 0.03497039434857596   Angle : 0.05444833080989938   body : 0.006936199698829703   
+Current LR:  [6.721549996250254e-05]
+Best Loss : 0.07004538154680715
+Evaluation : False
+Train , Epoch 20 : : total loss : 0.13771633487503812   Marker : 0.08772699157868935   Joint : 0.032423358374074396   Angle : 0.015494280548128517   body : 0.0020717043421009267   
+Evaluation : True
+Valid, Epoch 20 : : total loss : 0.16710472316705233   Marker : 0.07018991587809033   Joint : 0.035064194234325864   Angle : 0.05482646194433884   body : 0.00702415068146726   
+Current LR:  [6.0798715613566956e-05]
+Evaluation : False
+Train , Epoch 21 : : total loss : 0.13568735960449568   Marker : 0.0864803975512629   Joint : 0.031906118890380156   Angle : 0.015252494486399995   body : 0.0020483485646904088   
+Evaluation : True
+Valid, Epoch 21 : : total loss : 0.16736620272913574   Marker : 0.0703061418871582   Joint : 0.035555669557992525   Angle : 0.05440226506710533   body : 0.007102126104892224   
+Current LR:  [5.499451499016663e-05]
+Evaluation : False
+Train , Epoch 22 : : total loss : 0.13328465777217532   Marker : 0.08499120207303969   Joint : 0.0313155383790308   Angle : 0.014958186802028666   body : 0.0020197307056927178   
+Evaluation : True
+Valid, Epoch 22 : : total loss : 0.16591932548304086   Marker : 0.06961777555266241   Joint : 0.034974796439209206   Angle : 0.05420757651099603   body : 0.007119177579715877   
+Current LR:  [4.974441727069613e-05]
+Best Loss : 0.06961777555266241
+Evaluation : False
+Train , Epoch 23 : : total loss : 0.13162783334989714   Marker : 0.08396786513708836   Joint : 0.030877019084855174   Angle : 0.014779780072695259   body : 0.0020031691229477986   
+Evaluation : True
+Valid, Epoch 23 : : total loss : 0.16537633592054765   Marker : 0.06885932252492512   Joint : 0.034983499050577405   Angle : 0.05452192750710001   body : 0.007011587105622465   
+Current LR:  [4.4995524554468545e-05]
+Best Loss : 0.06885932252492512
+Evaluation : False
+Train , Epoch 24 : : total loss : 0.12987473809903383   Marker : 0.08287419279304026   Joint : 0.03044795535988038   Angle : 0.014575710898015204   body : 0.0019768789587233378   
+Evaluation : True
+Valid, Epoch 24 : : total loss : 0.16468293878140824   Marker : 0.06884771280093784   Joint : 0.03451502635076693   Angle : 0.054290097396321964   body : 0.007030102125491157   
+Current LR:  [4.06999888834651e-05]
+Best Loss : 0.06884771280093784
+Evaluation : False
+Train , Epoch 25 : : total loss : 0.12857905978710582   Marker : 0.08210512419227022   Joint : 0.030102789022736418   Angle : 0.014405929065572146   body : 0.0019652176745654525   
+Evaluation : True
+Valid, Epoch 25 : : total loss : 0.16514991911988725   Marker : 0.06927979155253691   Joint : 0.03468164373040691   Angle : 0.0540264419997583   body : 0.007162041786654209   
+Current LR:  [3.681453014530254e-05]
+Evaluation : False
+Train , Epoch 26 : : total loss : 0.12701141646027925   Marker : 0.08112576704466684   Joint : 0.029707886638235002   Angle : 0.014234805780955973   body : 0.0019429570197747237   
+Evaluation : True
+Valid, Epoch 26 : : total loss : 0.16514835015913054   Marker : 0.06870825027809846   Joint : 0.03482026782768717   Angle : 0.05453556431343876   body : 0.007084267873744809   
+Current LR:  [3.330000000000004e-05]
+Best Loss : 0.06870825027809846
+Evaluation : False
+Train , Epoch 27 : : total loss : 0.1257594531657649   Marker : 0.08034281478703112   Joint : 0.029383856107847453   Angle : 0.01410349245361568   body : 0.0019292899518594045   
+Evaluation : True
+Valid, Epoch 27 : : total loss : 0.16434911877017946   Marker : 0.06873298126184342   Joint : 0.03455730062413419   Angle : 0.05391189011040709   body : 0.007146947290029658   
+Training with lr from 3.33e-06 to 1e-06 in 2 epochs.
+LR decay rate : 0.3003003003003003
+Evaluation : False
+Train , Epoch 28 : : total loss : 0.12256517305093653   Marker : 0.07830417533243583   Joint : 0.028469762861796095   Angle : 0.01387750319111109   body : 0.0019137318602336084   
+Evaluation : True
+Valid, Epoch 28 : : total loss : 0.16298759668647572   Marker : 0.06789342419232143   Joint : 0.03417055076513115   Angle : 0.05387631554988595   body : 0.007047305757135642   
+Current LR:  [1e-06]
+Best Loss : 0.06789342419232143
+Evaluation : False
+Train , Epoch 29 : : total loss : 0.12228461858980796   Marker : 0.07808303260448111   Joint : 0.02843295904311884   Angle : 0.013857619605851704   body : 0.0019110074640092964   
+Evaluation : True
+Valid, Epoch 29 : : total loss : 0.16319446836423834   Marker : 0.06799803764767   Joint : 0.03418636136832459   Angle : 0.05390831405023269   body : 0.007101754768119157   
+Finished Training
+Load  /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/model_28_OS_ONLY_POSMARKERANGLEBODY.pt
+layer3 uses center striding.
+Use ResNet50 Next with center striding and Petrained model
+Image size : (256, 256)
+Load Pose Estimation Model : /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/model_28_OS_ONLY_POSMARKERANGLEBODY.pt
+ OS Joint error : 0.03417056053876877 , SMPLH Joint error : 0.04224185645580292 , Marker error : 0.04493808373808861 , BonyLandmark : 0.04526228457689285
+ OS Joint error : 0.029584718868136406 , SMPLH Joint error : 0.03650757297873497 , Marker error : 0.037702739238739014 , BonyLandmark : 0.037568822503089905
+ OS Joint error : 0.016197172924876213 , SMPLH Joint error : 0.02753530442714691 , Marker error : 0.024459922686219215 , BonyLandmark : 0.024957379326224327

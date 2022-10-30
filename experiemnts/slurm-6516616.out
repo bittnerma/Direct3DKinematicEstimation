@@ -1,0 +1,155 @@
+/home/nfs/weitseyang/.bashrc: line 20: dirname: command not found
+/home/nfs/weitseyang/.bashrc: line 21: dirname: command not found
+              total        used        free      shared  buff/cache   available
+Mem:         257670       33025      191396        5907       33247      217873
+Swap:        262143           0      262143
+Sat Jun 19 03:19:19 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:86:00.0 Off |                  N/A |
+| 30%   54C    P8     9W / 250W |      1MiB / 11178MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+BML_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/
+DATASET:
+  ANTIALIAS:
+    TEST: 1
+    TRAIN: 1
+  BBOX:
+    PARTIAL_VISUALBILITY: False
+  COLOR:
+    AUG: True
+  DATASETPERIMG: 2000
+  GEOM:
+    AUG: True
+    HFLIP: True
+    ROT: 10
+    SCALE_DOWN: 25
+    SCALE_UP: 25
+    SHIFT_AUG: 10
+  INTERPOLATION:
+    TEST: nearest
+    TRAIN: nearest
+  MIX_PROB: 0.2
+  OCCLUSION:
+    PROB: 0.0
+    SCALE: 0.8
+    ZERO: True
+  ROATION_PROB: 0.0
+  SCALING_PROB: 0.5
+  TRAINING_USEDEACHFRAME: 1
+  USEDEACHFRAME: 1
+EVAL_WORKERS: 16
+HYP:
+  MARKER: 1
+  POS: 1
+MODEL_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/
+PASCAL_PATH: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5
+POSTFIX: temporal_STE
+PREDICTION:
+  Joints_Inside_Cylinder_Body_LIST: [['ROOT', 'Torso'], ['RHIPJ', 'Torso'], ['LHIPJ', 'Torso'], ['Spine1', 'Torso'], ['Spine2', 'Torso'], ['Spine3', 'Torso'], ['LCOL', 'Torso'], ['RCOL', 'Torso'], ['NECK', 'Torso'], ['HEAD', 'HEAD'], ['RKNE', 'RightLeg'], ['RKNI', 'RightLeg'], ['LKNE', 'LeftLeg'], ['LKNI', 'LeftLeg'], ['LANK', 'LeftShrank'], ['RANK', 'RightShrank'], ['LANI', 'LeftShrank'], ['RANI', 'RightShrank'], ['RTOE', 'RightFOOT'], ['LTOE', 'LeftFOOT'], ['RMT1', 'RightFOOT'], ['LMT1', 'LeftFOOT'], ['RMT5', 'RightFOOT'], ['LMT5', 'LeftFOOT'], ['LELB', 'LeftArm'], ['RELB', 'RightArm'], ['LELBIN', 'LeftArm'], ['RELBIN', 'RightArm'], ['LIWR', 'LeftForearm'], ['RIWR', 'RightForearm'], ['LOWR', 'LeftForearm'], ['ROWR', 'RightForearm']]
+  POS_NAME: ['ROOT', 'LHIPJ', 'RHIPJ', 'Spine1', 'LKJC', 'RKJC', 'Spine2', 'LAJC', 'RAJC', 'Spine3', 'LFOOT', 'RFOOT', 'NECK', 'LCOL', 'RCOL', 'HEAD', 'LSHOULDER', 'RSHOULDER', 'LELC', 'RELC', 'LWRIST', 'RWRIST', 'LPSI', 'RPSI', 'RASI', 'LASI', 'T12', 'T10', 'T8', 'T1', 'C7', 'RKNE', 'RKNI', 'LKNE', 'LKNI', 'LANK', 'RANK', 'LANI', 'RANI', 'LHEE', 'RHEE', 'RTOE', 'LTOE', 'RMT1', 'LMT1', 'RMT5', 'LMT5', 'LSHO', 'RSHO', 'STRN', 'CLAV', 'RCLAV', 'LCLAV', 'LELB', 'RELB', 'LELBIN', 'RELBIN', 'LIWR', 'RIWR', 'LOWR', 'ROWR', 'LFHD', 'RFHD', 'LBHD', 'RBHD']
+PROGRESSBAR: True
+SEED: 100
+STARTMODELPATH: None
+TESTMODE: False
+TEST_SUBJECTS: [2, 29, 19, 21, 51, 26, 7, 72, 77, 17, 65, 80, 6, 76, 10, 73, 13, 38]
+TRAINING:
+  AMSGRAD: False
+  AWARED_OCCLUSION:
+    GT: False
+    USE: False
+    USE_PREDICTION: False
+  BATCHSIZE: 256
+  CAUSAL: False
+  END_LR: [1.82e-05]
+  END_MOMENTUM: 0.001
+  EPOCH: [60]
+  EVALUATION_BATCHSIZE: 256
+  HYP: [1, 0.1]
+  IMGSIZE: (256, 256)
+  INITIAL_MOMENTUM: 0.1
+  LOSS2D: False
+  LOSSTYPE: 1
+  METRIC_SCALE:
+    BBOX_SIZE: 2.2
+    DEPTH: 8
+    EVAL_STRIDING: 4
+    STRIDING: 32
+  NUMPRED: 65
+  NUM_JOINTS: 22
+  NUM_MARKER: 43
+  RECEPTIVE_FIELD: 243
+  REFINE: False
+  RESNET:
+    CENTER_STRIDING: True
+    NEXT: True
+    PRETRAINED: True
+  START_LR: [0.001]
+  TCN: False
+  TRAINING_STEPS: 1
+  USE_2D: False
+  USE_GT: False
+  VALID_BATCHSIZE: 256
+TRAINING_SUBJECTS: [78, 59, 79, 44, 56, 88, 75, 61, 53, 47, 40, 41, 32, 70, 28, 39, 69, 11, 3, 90, 71, 54, 20, 85, 37, 34, 33, 46, 67, 63, 55, 36, 42, 50, 24, 35, 84, 45, 60, 16, 74, 82, 27, 89, 57, 5, 49, 22, 4, 66, 31, 83, 43, 48, 52, 68, 25, 9, 18, 1, 81, 58, 23, 62, 64, 8, 87]
+TRANSFOMER:
+  BATCHNORM: False
+  DROPOUT: False
+  D_CHANNEL: 512
+  D_MODEL: 256
+  INFEATURES: 195
+  N1: 3
+  N_HEADS: 8
+  OUTFEATURES: 195
+  STRIDES: [3, 9, 9]
+VALID_SUBJECTS: [14, 86, 15, 30]
+VALID_WORKERS: 16
+WORKERS: 16
+166025 training data, 21822 valid data, 100839 test data
+Use Transformer, Receptive Field : 243
+  0%|          | 0/649 [00:00<?, ?it/s]  0%|          | 1/649 [00:14<2:38:31, 14.68s/it]  0%|          | 2/649 [00:14<1:51:31, 10.34s/it]  0%|          | 3/649 [00:15<1:18:37,  7.30s/it]  1%|          | 4/649 [00:15<55:37,  5.17s/it]    1%|          | 5/649 [00:15<39:32,  3.68s/it]  1%|          | 6/649 [00:15<28:19,  2.64s/it]  1%|          | 7/649 [00:15<20:27,  1.91s/it]  1%|          | 8/649 [00:16<14:59,  1.40s/it]  1%|▏         | 9/649 [00:16<11:08,  1.04s/it]  2%|▏         | 10/649 [00:16<08:28,  1.26it/s]  2%|▏         | 11/649 [00:16<06:36,  1.61it/s]  2%|▏         | 12/649 [00:17<05:18,  2.00it/s]  2%|▏         | 13/649 [00:17<04:23,  2.42it/s]  2%|▏         | 14/649 [00:17<03:43,  2.84it/s]  2%|▏         | 15/649 [00:17<03:15,  3.24it/s]  2%|▏         | 16/649 [00:17<02:56,  3.59it/s]  3%|▎         | 17/649 [00:26<28:25,  2.70s/it]  3%|▎         | 18/649 [00:26<20:33,  1.95s/it]  3%|▎         | 19/649 [00:26<15:02,  1.43s/it]  3%|▎         | 20/649 [00:26<11:10,  1.07s/it]  3%|▎         | 21/649 [00:27<08:28,  1.24it/s]  3%|▎         | 22/649 [00:27<06:34,  1.59it/s]  4%|▎         | 23/649 [00:27<05:17,  1.97it/s]  4%|▎         | 24/649 [00:27<04:21,  2.39it/s]  4%|▍         | 25/649 [00:27<03:41,  2.82it/s]  4%|▍         | 26/649 [00:28<03:13,  3.22it/s]  4%|▍         | 27/649 [00:28<02:54,  3.56it/s]  4%|▍         | 28/649 [00:28<02:40,  3.86it/s]  4%|▍         | 29/649 [00:28<02:30,  4.11it/s]  5%|▍         | 30/649 [00:28<02:23,  4.30it/s]  5%|▍         | 31/649 [00:29<02:18,  4.45it/s]  5%|▍         | 32/649 [00:29<02:15,  4.55it/s]  5%|▌         | 33/649 [00:38<29:52,  2.91s/it]  5%|▌         | 34/649 [00:38<21:30,  2.10s/it]  5%|▌         | 35/649 [00:38<15:45,  1.54s/it]  6%|▌         | 36/649 [00:39<11:39,  1.14s/it]  6%|▌         | 37/649 [00:39<08:46,  1.16it/s]  6%|▌         | 38/649 [00:39<06:46,  1.50it/s]  6%|▌         | 39/649 [00:39<05:30,  1.84it/s]  6%|▌         | 40/649 [00:40<04:29,  2.26it/s]  6%|▋         | 41/649 [00:40<03:45,  2.69it/s]  6%|▋         | 42/649 [00:40<03:15,  3.10it/s]  7%|▋         | 43/649 [00:40<02:54,  3.47it/s]  7%|▋         | 44/649 [00:40<02:39,  3.79it/s]  7%|▋         | 45/649 [00:41<02:29,  4.04it/s]  7%|▋         | 46/649 [00:41<02:22,  4.24it/s]  7%|▋         | 47/649 [00:41<02:17,  4.39it/s]  7%|▋         | 48/649 [00:41<02:13,  4.51it/s]  8%|▊         | 49/649 [00:50<29:05,  2.91s/it]  8%|▊         | 50/649 [00:51<20:57,  2.10s/it]  8%|▊         | 51/649 [00:51<15:17,  1.53s/it]  8%|▊         | 52/649 [00:51<11:18,  1.14s/it]  8%|▊         | 53/649 [00:51<08:32,  1.16it/s]  8%|▊         | 54/649 [00:51<06:34,  1.51it/s]  8%|▊         | 55/649 [00:52<05:13,  1.90it/s]  9%|▊         | 56/649 [00:52<04:16,  2.32it/s]  9%|▉         | 57/649 [00:52<03:36,  2.73it/s]  9%|▉         | 58/649 [00:52<03:09,  3.12it/s]  9%|▉         | 59/649 [00:53<02:49,  3.49it/s]  9%|▉         | 60/649 [00:53<02:35,  3.80it/s]  9%|▉         | 61/649 [00:53<02:25,  4.05it/s] 10%|▉         | 62/649 [00:53<02:18,  4.25it/s] 10%|▉         | 63/649 [00:53<02:15,  4.33it/s] 10%|▉         | 64/649 [00:54<02:10,  4.47it/s]Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/utils_bml_temporal2.py", line 353, in <module>
+    trainingProgram.run()
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/utils_bml_temporal2.py", line 78, in run
+    self.train(startEpoch, endEpoch, i)
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/utils_bml_temporal2.py", line 124, in train
+    losses = self.model_forward(inf=inf, evaluation=False)
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/utils_bml_temporal2.py", line 224, in model_forward
+    predPos = self.model(inputs)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/TemporalModel.py", line 67, in forward
+    y = self.temporalModel(x)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/temporal/Transformer.py", line 120, in forward
+    x = self.stridedEncoder(x)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/videoMuscle/videoMuscle/models/temporal/Transformer.py", line 93, in forward
+    positions = self.embedLayer(positions)[None, :, :].expand(x.shape[0], x.shape[1], self.d_model)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 156, in forward
+    return F.embedding(
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 1916, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+  File "/home/nfs/weitseyang/.local/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 46116) is killed by signal: Killed. 
+ 10%|▉         | 64/649 [01:06<10:05,  1.03s/it]slurmstepd: error: Detected 1 oom-kill event(s) in step 6516616.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+srun: error: ewi1: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom-kill event(s) in step 6516616.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

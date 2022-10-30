@@ -1,0 +1,28 @@
+# my_project/experiment.yaml
+POSTFIX : "OS_TEMPORAL_TRANSFORMER_L2"
+PASCAL_PATH : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5"
+BML_FOLDER : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/"
+MODEL_FOLDER : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/"
+WORKERS : 16
+EVAL_WORKERS : 16
+VALID_WORKERS : 16
+TESTMODE : False
+PROGRESSBAR: False
+TRAINING:
+  EVALUATION_BATCHSIZE : 128
+  BATCHSIZE : 128
+  USE_OS_SIMULATION : False
+DATASET  :
+  TRAINING_USEDEACHFRAME: 2
+MODEL:
+  TYPE : 1
+  POS : True
+LOSS  :  
+  ANGLE : 
+    TYPE : 3
+  BODY :
+    TYPE : 3
+  POS  :
+    TYPE : 2
+  MARKER :
+    TYPE : 2

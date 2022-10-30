@@ -1,0 +1,302 @@
+/home/nfs/weitseyang/.bashrc: line 20: dirname: command not found
+/home/nfs/weitseyang/.bashrc: line 21: dirname: command not found
+              total        used        free      shared  buff/cache   available
+Mem:         385423       37904      299673         381       47844      346025
+Swap:         57080           0       57080
+Sat May 15 12:00:48 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  On   | 00000000:3D:00.0 Off |                  N/A |
+| 27%   28C    P8     9W / 250W |      1MiB / 11019MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+BML_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/
+DATASET:
+  ANTIALIAS:
+    TEST: 4
+    TRAIN: 1
+  BBOX:
+    PARTIAL_VISUALBILITY: False
+  COLOR:
+    AUG: True
+  DATASETPERIMG: 2000
+  GEOM:
+    AUG: True
+    HFLIP: False
+    ROT: 20
+    SCALE_DOWN: 25
+    SCALE_UP: 25
+    SHIFT_AUG: 10
+  INTERPOLATION:
+    TEST: linear
+    TRAIN: nearest
+  OCCLUSION:
+    PROB: 0.7
+    SCALE: 0.8
+  TRAINING_USEDEACHFRAME: 1
+  USEDEACHFRAME: 1
+HYP:
+  ANGLE: 0.01
+  BODY: 0.1
+  MARKER: 1
+  POS: 1
+  SY_BODY: 0.005
+LOSS:
+  ANGLE:
+    USE: True
+  BODY:
+    EVAL_TYPE: 1
+    TYPE: 1
+    USE: True
+  POS:
+    TYPE: 1
+  SY_BODY:
+    EVAL_TYPE: 1
+    TYPE: 1
+    USE: False
+MODEL_FOLDER: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/
+NUM_JOINTS: 50
+PASCAL_PATH: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5
+PCA_PATH: /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/pca.pkl
+POSTFIX: OS_BASE
+PREDICTION:
+  BODY: ['pelvis', 'lumbar5', 'lumbar4', 'lumbar3', 'lumbar2', 'lumbar1', 'thoracic12', 'thoracic11', 'thoracic10', 'thoracic9', 'thoracic8', 'thoracic7', 'thoracic6', 'thoracic5', 'thoracic4', 'thoracic3', 'thoracic2', 'thoracic1', 'head_neck', 'femur_r', 'tibia_r', 'talus_r', 'calcn_r', 'toes_r', 'femur_l', 'tibia_l', 'talus_l', 'calcn_l', 'toes_l', 'cerv6', 'cerv5', 'cerv4', 'cerv3', 'cerv2', 'cerv1', 'jaw', 'skull', 'thorax', 'clavicle', 'scapula', 'humerus', 'ulna', 'radius', 'clavicle_l', 'scapula_l', 'humerus_l', 'ulna_l', 'radius_l']
+  COORDINATES: ['L5_S1_FE', 'L5_S1_LB', 'L5_S1_AR', 'L4_L5_FE', 'L4_L5_LB', 'L4_L5_AR', 'T12_L1_FE', 'T12_L1_LB', 'T12_L1_AR', 'T11_T12_FE', 'T11_T12_LB', 'T11_T12_AR', 'T10_T11_FE', 'T10_T11_LB', 'T10_T11_AR', 'T9_T10_FE', 'T9_T10_LB', 'T9_T10_AR', 'T8_T9_FE', 'T8_T9_LB', 'T8_T9_AR', 'T1_T2_FE', 'T1_T2_LB', 'T1_T2_AR', 'T1_head_neck_FE', 'T1_head_neck_LB', 'T1_head_neck_AR', 'hip_flexion_r', 'hip_adduction_r', 'hip_rotation_r', 'knee_angle_r', 'knee_angle_y_r', 'knee_angle_x_r', 'ankle_angle_r', 'subtalar_angle_r', 'mtp_angle_r', 'hip_flexion_l', 'hip_adduction_l', 'hip_rotation_l', 'knee_angle_l', 'knee_angle_y_l', 'knee_angle_x_l', 'ankle_angle_l', 'subtalar_angle_l', 'mtp_angle_l', 'skull_z', 'skull_y', 'skull_x', 'sternoclavicular_r2', 'sternoclavicular_r3', 'acromioclavicular_r2', 'elv_angle', 'shoulder_elv', 'shoulder1_r2', 'shoulder_rot', 'elbow_flexion', 'elbow_x', 'pro_sup', 'sternoclavicular_r2_l', 'sternoclavicular_r3_l', 'acromioclavicular_r2_l', 'elv_angle_l', 'shoulder_elv_l', 'shoulder1_r2_l', 'shoulder_rot_l', 'elbow_flexion_l', 'elbow_x_l', 'pro_sup_l', 'ribs_bending']
+  JOINTS: ['ground_pelvis', 'L5_S1_IVDjnt', 'L4_L5_IVDjnt', 'L3_L4_IVDjnt', 'L2_L3_IVDjnt', 'L1_L2_IVDjnt', 'T12_L1_IVDjnt', 'T11_T12_IVDjnt', 'T10_T11_IVDjnt', 'T9_T10_IVDjnt', 'T8_T9_IVDjnt', 'T7_T8_IVDjnt', 'T6_T7_IVDjnt', 'T5_T6_IVDjnt', 'T4_T5_IVDjnt', 'T3_T4_IVDjnt', 'T2_T3_IVDjnt', 'T1_T2_IVDjnt', 'T1_head_neck', 'hip_r', 'knee_r', 'ankle_r', 'subtalar_r', 'mtp_r', 'hip_l', 'knee_l', 'ankle_l', 'subtalar_l', 'mtp_l', 'C7_cerv6', 'C7_cerv5', 'C7_cerv4', 'C7_cerv3', 'C7_cerv2', 'C7_cerv1', 'skull_jaw', 'C7_skull', 'sternoclavicular', 'acromioclavicular', 'shoulder2', 'elbow', 'radioulnar', 'sternoclavicular_l', 'acromioclavicular_l', 'shoulder2_l', 'elbow_l', 'radioulnar_l', 'T1_rib']
+  LEAFJOINTS: ['radiocarpal', 'radiocarpal_l']
+  MARKER: ['LPSI', 'RPSI', 'RASI', 'LASI', 'T12', 'T10', 'T8', 'T1', 'C7', 'RKNE', 'RKNI', 'LKNE', 'LKNI', 'LANK', 'RANK', 'LANI', 'RANI', 'LHEE', 'RHEE', 'RTOE', 'LTOE', 'RMT1', 'LMT1', 'RMT5', 'LMT5', 'LSHO', 'RSHO', 'STRN', 'CLAV', 'RCLAV', 'LCLAV', 'LELB', 'RELB', 'LELBIN', 'RELBIN', 'LIWR', 'RIWR', 'LOWR', 'ROWR', 'LFHD', 'RFHD', 'LBHD', 'RBHD']
+  MIRROR_BONES: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 24, 25, 26, 27, 28, 19, 20, 21, 22, 23, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46, 47, 38, 39, 40, 41, 42]
+SEED: 100
+TESTMODE: False
+TRAINING:
+  BATCHSIZE: 64
+  COORDINATE_MAX_WEIGHT: 2
+  END_LR: [3.33e-05, 1e-06]
+  EPOCH: [60, 2]
+  EVALUATION_BATCHSIZE: 32
+  IMGSIZE: (256, 256)
+  MARKER_PREDICTION: True
+  METRIC_SCALE:
+    BBOX_SIZE: 2.2
+    DEPTH: 8
+    STRIDING: 32
+  PCA: False
+  PCA_COMPONENTS: 30
+  RESNET:
+    CENTER_STRIDING: True
+    NEXT: True
+    PRETRAINED: True
+  START_LR: [0.0005, 3.33e-06]
+  TRAINING_STEPS: 2
+WORKERS: 16
+22085 training data, 1357 valid data, 5900 test data
+layer3 uses center striding.
+Use ResNet50 Next with center striding and Petrained model
+Image size : (256, 256)
+Training with lr from 0.0005 to 3.33e-05 in 60 epochs.
+LR decay rate : 0.9551220805987556
+Train , Epoch 0 : : total loss : 0.6698783695697784   3d pose loss : 0.22237937346748685   3d marker loss : 0.28852413983448694   angle loss : 0.1264292398440665   bone scale loss : 0.032545619938468585   
+Valid, Epoch 0 : : total loss : 2.0336639092261946   3d pose loss : 0.6279267147348133   3d marker loss : 0.8065333665076124   angle loss : 0.47942093601100305   bone scale loss : 0.11978287993763508   
+Current LR:  [0.0004775610402993778]
+Train , Epoch 1 : : total loss : 0.5318203267843827   3d pose loss : 0.17994144645290097   3d marker loss : 0.2351222867982975   angle loss : 0.09304035288700159   bone scale loss : 0.02371624200132446   
+Valid, Epoch 1 : : total loss : 0.9741412558446672   3d pose loss : 0.3647481230312002   3d marker loss : 0.4492018495136618   angle loss : 0.12659846611908454   bone scale loss : 0.03359281757603521   
+Current LR:  [0.0004561290944236479]
+Train , Epoch 2 : : total loss : 0.47594314779060476   3d pose loss : 0.16180051934459935   3d marker loss : 0.21109610389972078   angle loss : 0.08203278959229372   bone scale loss : 0.02101373482981454   
+Valid, Epoch 2 : : total loss : 0.4111768593222408   3d pose loss : 0.12900413461880553   3d marker loss : 0.17786107664171527   angle loss : 0.081212914244779   bone scale loss : 0.02309873502484647   
+Current LR:  [0.00043565896968754083]
+Train , Epoch 3 : : total loss : 0.407837562630142   3d pose loss : 0.1350274622872256   3d marker loss : 0.18052681943644647   angle loss : 0.07381040052227351   bone scale loss : 0.018472879201821658   
+Valid, Epoch 3 : : total loss : 0.4918131269596918   3d pose loss : 0.16725575897565376   3d marker loss : 0.219000299098128   angle loss : 0.08095199480246514   bone scale loss : 0.02460507065738574   
+Current LR:  [0.0004161075015594742]
+Train , Epoch 4 : : total loss : 0.39065568939499234   3d pose loss : 0.1287645007821097   3d marker loss : 0.17287737295247507   angle loss : 0.07145130002628201   bone scale loss : 0.017562515410068244   
+Valid, Epoch 4 : : total loss : 0.3695791303540471   3d pose loss : 0.11479681971851481   3d marker loss : 0.1595921437355553   angle loss : 0.07525952752232112   bone scale loss : 0.019930633843252565   
+Current LR:  [0.00039743346264223495]
+Train , Epoch 5 : : total loss : 0.34671636189239613   3d pose loss : 0.11214981662190479   3d marker loss : 0.15232485945242039   angle loss : 0.06664857697011768   bone scale loss : 0.015593109393249387   
+Valid, Epoch 5 : : total loss : 0.3797943920621823   3d pose loss : 0.11858376739828044   3d marker loss : 0.16432799709660215   angle loss : 0.07678250697226584   bone scale loss : 0.020100123296349734   
+Current LR:  [0.00037959747573841927]
+Train , Epoch 6 : : total loss : 0.3168236386084902   3d pose loss : 0.10095977679542874   3d marker loss : 0.1379451496877532   angle loss : 0.0636612796265146   bone scale loss : 0.0142574325878767   
+Valid, Epoch 6 : : total loss : 0.37078953492088007   3d pose loss : 0.11799278053713794   3d marker loss : 0.1619848474124467   angle loss : 0.07078183364938442   bone scale loss : 0.020030072586186772   
+Current LR:  [0.0003625619308173147]
+Train , Epoch 7 : : total loss : 0.30281180549358977   3d pose loss : 0.09580051132302353   3d marker loss : 0.13170832937610322   angle loss : 0.06191837134352629   bone scale loss : 0.013384593313262947   
+Valid, Epoch 7 : : total loss : 0.32464515591862453   3d pose loss : 0.0962593944615622   3d marker loss : 0.136957285416504   angle loss : 0.0709136572495575   bone scale loss : 0.020514819954982468   
+Current LR:  [0.0003462909057081357]
+Train , Epoch 8 : : total loss : 0.29318198695562886   3d pose loss : 0.09257848336212877   3d marker loss : 0.12760678944380388   angle loss : 0.06027571949837864   bone scale loss : 0.012720995801298514   
+Valid, Epoch 8 : : total loss : 0.31699628942401076   3d pose loss : 0.0956580387641159   3d marker loss : 0.13496117286148016   angle loss : 0.06838427296261095   bone scale loss : 0.01799280579114716   
+Current LR:  [0.00033075009035238203]
+Train , Epoch 9 : : total loss : 0.27546167589616083   3d pose loss : 0.08587730999874033   3d marker loss : 0.11907611577839092   angle loss : 0.05849610137334768   bone scale loss : 0.012012149169501187   
+Valid, Epoch 9 : : total loss : 0.321134488549229   3d pose loss : 0.09674079275869146   3d marker loss : 0.13772179189638434   angle loss : 0.06736819016731392   bone scale loss : 0.01930371362801062   
+Current LR:  [0.0003159067144555935]
+Train , Epoch 10 : : total loss : 0.26776651882607005   3d pose loss : 0.08313091755777166   3d marker loss : 0.11534263381491537   angle loss : 0.05765014296208603   bone scale loss : 0.011642824224047903   
+Valid, Epoch 10 : : total loss : 0.31474885557535914   3d pose loss : 0.09581059722577111   3d marker loss : 0.13142169189523403   angle loss : 0.0688096413563171   bone scale loss : 0.01870692311048332   
+Current LR:  [0.0003017294783859434]
+Train , Epoch 11 : : total loss : 0.2937531172365382   3d pose loss : 0.0934848546333935   3d marker loss : 0.12806560792352842   angle loss : 0.05971928283140279   bone scale loss : 0.012483373195256876   
+Valid, Epoch 11 : : total loss : 0.2949842858507779   3d pose loss : 0.08746955442182615   3d marker loss : 0.1235753801172941   angle loss : 0.06628023409720459   bone scale loss : 0.017659120958960047   
+Current LR:  [0.0002881884871739595]
+Train , Epoch 12 : : total loss : 0.2545977035726326   3d pose loss : 0.07844316073949786   3d marker loss : 0.10926883278981499   angle loss : 0.05583643170370572   bone scale loss : 0.01104927874993587   
+Valid, Epoch 12 : : total loss : 0.28605386783906267   3d pose loss : 0.08288224664082312   3d marker loss : 0.11996150174910476   angle loss : 0.0653546203913369   bone scale loss : 0.017855503032905   
+Current LR:  [0.00027525518747420003]
+Train , Epoch 13 : : total loss : 0.260303965513257   3d pose loss : 0.08118437167958936   3d marker loss : 0.11220995667188063   angle loss : 0.05580275424796602   bone scale loss : 0.011106883032598358   
+Valid, Epoch 13 : : total loss : 0.28719762536472665   3d pose loss : 0.08435364707744376   3d marker loss : 0.1196871576014036   angle loss : 0.06506030618397735   bone scale loss : 0.018096512020205256   
+Current LR:  [0.00026290230735595847]
+Train , Epoch 14 : : total loss : 0.23466749575690946   3d pose loss : 0.07134868096614229   3d marker loss : 0.09986636265032534   angle loss : 0.05330105828850166   bone scale loss : 0.010151393576592638   
+Valid, Epoch 14 : : total loss : 0.2918780805788764   3d pose loss : 0.08836935334286447   3d marker loss : 0.12262976134447114   angle loss : 0.06394512524214754   bone scale loss : 0.016933839232849565   
+Current LR:  [0.00025110379879603656]
+Train , Epoch 15 : : total loss : 0.2314517410337061   3d pose loss : 0.07042459420103958   3d marker loss : 0.09832858309365701   angle loss : 0.05265595955045327   bone scale loss : 0.010042604812137458   
+Valid, Epoch 15 : : total loss : 0.28583083050867697   3d pose loss : 0.08644549971392863   3d marker loss : 0.11932665614758507   angle loss : 0.06284395328056487   bone scale loss : 0.01721472284902785   
+Current LR:  [0.00023983478275232172]
+Train , Epoch 16 : : total loss : 0.22499006641083868   3d pose loss : 0.06833146929308988   3d marker loss : 0.09508696833382482   angle loss : 0.05182196206372717   bone scale loss : 0.009749667181808879   
+Valid, Epoch 16 : : total loss : 0.27836440605720175   3d pose loss : 0.08397089183198764   3d marker loss : 0.11592795695991488   angle loss : 0.06228880317402659   bone scale loss : 0.016176754596396763   
+Current LR:  [0.00022907149670234805]
+Train , Epoch 17 : : total loss : 0.25382143423177195   3d pose loss : 0.07910679030245629   3d marker loss : 0.10917275133340255   angle loss : 0.054554447909628136   bone scale loss : 0.01098744530716668   
+Valid, Epoch 17 : : total loss : 0.27670543195574093   3d pose loss : 0.0840869164238454   3d marker loss : 0.11579995306432467   angle loss : 0.06081458972320894   bone scale loss : 0.01600397161332315   
+Current LR:  [0.00021879124453621764]
+Train , Epoch 18 : : total loss : 0.2229737153087837   3d pose loss : 0.06758253598126812   3d marker loss : 0.09423035949036696   angle loss : 0.05144282956270204   bone scale loss : 0.009717990625379742   
+Valid, Epoch 18 : : total loss : 0.26752348128890147   3d pose loss : 0.07985755847320894   3d marker loss : 0.11078695347841469   angle loss : 0.06078016670117417   bone scale loss : 0.01609880307534203   
+Current LR:  [0.0002089723486982233]
+Train , Epoch 19 : : total loss : 0.2200312324192213   3d pose loss : 0.0666636594503686   3d marker loss : 0.09305185690738153   angle loss : 0.05081536970708681   bone scale loss : 0.009500346106031666   
+Valid, Epoch 19 : : total loss : 0.26581803366113604   3d pose loss : 0.07916921855951814   3d marker loss : 0.10801633245908081   angle loss : 0.06201496617093012   bone scale loss : 0.01661751559313027   
+Current LR:  [0.00019959410447625568]
+Train , Epoch 20 : : total loss : 0.2087093297554099   3d pose loss : 0.06256988265592119   3d marker loss : 0.08750302022781925   angle loss : 0.04954160784465679   bone scale loss : 0.009094819081002388   
+Valid, Epoch 20 : : total loss : 0.25295106540643386   3d pose loss : 0.07489725738741847   3d marker loss : 0.10233708313483039   angle loss : 0.05897676351760887   bone scale loss : 0.016739959049593814   
+Current LR:  [0.00019063673634260673]
+Train , Epoch 21 : : total loss : 0.2017109944336656   3d pose loss : 0.059931504348481913   3d marker loss : 0.0842166899986889   angle loss : 0.0486845132989296   bone scale loss : 0.008878287104754776   
+Valid, Epoch 21 : : total loss : 0.25318578999096975   3d pose loss : 0.0749144438179258   3d marker loss : 0.10236106686672922   angle loss : 0.05851511003870954   bone scale loss : 0.017395169739786456   
+Current LR:  [0.00018208135625410695]
+Train , Epoch 22 : : total loss : 0.19712249472521354   3d pose loss : 0.05841787832154744   3d marker loss : 0.08210300317277079   angle loss : 0.04792653420481129   bone scale loss : 0.008675079264988502   
+Valid, Epoch 22 : : total loss : 0.25725116076149657   3d pose loss : 0.0772024390446235   3d marker loss : 0.10541165287914571   angle loss : 0.05808014380378414   bone scale loss : 0.016556925451219652   
+Current LR:  [0.00017390992382366587]
+Train , Epoch 23 : : total loss : 0.21117231163425723   3d pose loss : 0.06366046573156896   3d marker loss : 0.08876162642154141   angle loss : 0.04944867886926817   bone scale loss : 0.009301540771148344   
+Valid, Epoch 23 : : total loss : 0.2466234066245656   3d pose loss : 0.07245902735781125   3d marker loss : 0.09967353885105276   angle loss : 0.05837183325450563   bone scale loss : 0.01611900651331939   
+Current LR:  [0.00016610520827923083]
+Train , Epoch 24 : : total loss : 0.19468474897785462   3d pose loss : 0.057679870551910956   3d marker loss : 0.0809813805896303   angle loss : 0.047429872973673584   bone scale loss : 0.008593625083997629   
+Valid, Epoch 24 : : total loss : 0.239005061924765   3d pose loss : 0.07044449033505265   3d marker loss : 0.09583525659410762   angle loss : 0.056571416803906746   bone scale loss : 0.016153898334450464   
+Current LR:  [0.00015865075212994858]
+Train , Epoch 25 : : total loss : 0.18850643902585126   3d pose loss : 0.05534446716740511   3d marker loss : 0.07817376165286355   angle loss : 0.04666219135557396   bone scale loss : 0.008326019839370164   
+Valid, Epoch 25 : : total loss : 0.26080172520485007   3d pose loss : 0.08022213417023706   3d marker loss : 0.10622071517067265   angle loss : 0.057649459088648075   bone scale loss : 0.016709416786273263   
+Current LR:  [0.00015153083646291394]
+Train , Epoch 26 : : total loss : 0.18362170159816743   3d pose loss : 0.05371021996589675   3d marker loss : 0.07586174751969352   angle loss : 0.04589222082193347   bone scale loss : 0.008157514097789923   
+Valid, Epoch 26 : : total loss : 0.2506431876163581   3d pose loss : 0.07580730821951048   3d marker loss : 0.1010923595576051   angle loss : 0.056146319552037145   bone scale loss : 0.017597201396282226   
+Current LR:  [0.00014473044779732814]
+Train , Epoch 27 : : total loss : 0.18145611584186555   3d pose loss : 0.05315879517491313   3d marker loss : 0.07500702496887982   angle loss : 0.045304051397935204   bone scale loss : 0.00798624394380528   
+Valid, Epoch 27 : : total loss : 0.24430573856294727   3d pose loss : 0.07345716410378982   3d marker loss : 0.09819741431807628   angle loss : 0.05564740047616474   bone scale loss : 0.017003762816451627   
+Current LR:  [0.00013823524642617364]
+Train , Epoch 28 : : total loss : 0.1773904320554457   3d pose loss : 0.051592096243647564   3d marker loss : 0.07317597277570462   angle loss : 0.04482903901649558   bone scale loss : 0.007793324236906525   
+Valid, Epoch 28 : : total loss : 0.24638079577890845   3d pose loss : 0.07508147289933927   3d marker loss : 0.09948406381122137   angle loss : 0.055910750092525385   bone scale loss : 0.01590450821813627   
+Current LR:  [0.00013203153617864866]
+Train , Epoch 29 : : total loss : 0.1753552356491918   3d pose loss : 0.0510277543162954   3d marker loss : 0.07222265108771946   angle loss : 0.04439680881906247   bone scale loss : 0.007708021991656743   
+Valid, Epoch 29 : : total loss : 0.23689175108907498   3d pose loss : 0.0704349965493997   3d marker loss : 0.09372808437797192   angle loss : 0.056478354055914885   bone scale loss : 0.016250318818085318   
+Current LR:  [0.00012610623553960078]
+Train , Epoch 30 : : total loss : 0.17098867508812227   3d pose loss : 0.04941920470716297   3d marker loss : 0.07017911825922953   angle loss : 0.04383781939960908   bone scale loss : 0.007552532716721728   
+Valid, Epoch 30 : : total loss : 0.2275453863024448   3d pose loss : 0.06643059070090994   3d marker loss : 0.0894849465538143   angle loss : 0.05545194880788434   bone scale loss : 0.01617790336940951   
+Current LR:  [0.00012044685006506023]
+Train , Epoch 31 : : total loss : 0.16898489136626754   3d pose loss : 0.048836176475321035   3d marker loss : 0.06937153494876364   angle loss : 0.04333656554420789   bone scale loss : 0.007440614792099898   
+Valid, Epoch 31 : : total loss : 0.23639820741219122   3d pose loss : 0.06993404459057262   3d marker loss : 0.09510244564177275   angle loss : 0.05527714274785232   bone scale loss : 0.016084573729212178   
+Current LR:  [0.00011504144603570669]
+Train , Epoch 32 : : total loss : 0.1656924097866252   3d pose loss : 0.04767276375837948   3d marker loss : 0.06784853349993195   angle loss : 0.04280930183072021   bone scale loss : 0.007361810721888923   
+Valid, Epoch 32 : : total loss : 0.23488003924741582   3d pose loss : 0.07018125522813115   3d marker loss : 0.09442857142837063   angle loss : 0.05448822353197181   bone scale loss : 0.015781989684856897   
+Current LR:  [0.00010987862529271364]
+Train , Epoch 33 : : total loss : 0.16429985567279484   3d pose loss : 0.047230104011469994   3d marker loss : 0.06734217283302459   angle loss : 0.042475291330745256   bone scale loss : 0.007252287305891514   
+Valid, Epoch 33 : : total loss : 0.2341490568443529   3d pose loss : 0.06989969246160835   3d marker loss : 0.09256381345480438   angle loss : 0.05505205456966324   bone scale loss : 0.01663349544685732   
+Current LR:  [0.0001049475012029077]
+Train , Epoch 34 : : total loss : 0.16098724910314532   3d pose loss : 0.04612705192488173   3d marker loss : 0.06577183214434679   angle loss : 0.04196964034783667   bone scale loss : 0.007118724973575361   
+Valid, Epoch 34 : : total loss : 0.23663083120752276   3d pose loss : 0.07182308427533773   3d marker loss : 0.09370768895989055   angle loss : 0.05515665391304955   bone scale loss : 0.01594340327959686   
+Current LR:  [0.00010023767570256161]
+Train , Epoch 35 : : total loss : 0.16036300987437152   3d pose loss : 0.04609374119967654   3d marker loss : 0.06554345438877741   angle loss : 0.041646545941846955   bone scale loss : 0.007079269103975831   
+Valid, Epoch 35 : : total loss : 0.22624001998451587   3d pose loss : 0.0670816325139894   3d marker loss : 0.0897578049338558   angle loss : 0.05360050959541417   bone scale loss : 0.015800074215047748   
+Current LR:  [9.573921737141397e-05]
+Train , Epoch 36 : : total loss : 0.15788407805173293   3d pose loss : 0.04515674705954566   3d marker loss : 0.0645140290260315   angle loss : 0.04124236251564994   bone scale loss : 0.006970939589529366   
+Valid, Epoch 36 : : total loss : 0.2304938832186739   3d pose loss : 0.06919859970151807   3d marker loss : 0.09166396287933552   angle loss : 0.05352153590082156   bone scale loss : 0.016109787581067094   
+Current LR:  [9.144264049068144e-05]
+Train , Epoch 37 : : total loss : 0.1546666856693185   3d pose loss : 0.044053523166888   3d marker loss : 0.06296253644901773   angle loss : 0.0408056387434835   bone scale loss : 0.006844987536686054   
+Valid, Epoch 37 : : total loss : 0.22959255680233218   3d pose loss : 0.0689551115211706   3d marker loss : 0.09028554261389601   angle loss : 0.05449124962069484   bone scale loss : 0.015860654287419076   
+Current LR:  [8.733888504090368e-05]
+Train , Epoch 38 : : total loss : 0.15313743694105011   3d pose loss : 0.043533162286748056   3d marker loss : 0.062369017162616704   angle loss : 0.04049464632635531   bone scale loss : 0.006740610790101515   
+Valid, Epoch 38 : : total loss : 0.22486029764089677   3d pose loss : 0.06611410852908736   3d marker loss : 0.08874400371827004   angle loss : 0.05365974765185846   bone scale loss : 0.01634243764285226   
+Current LR:  [8.341929759744346e-05]
+Train , Epoch 39 : : total loss : 0.15206384874772336   3d pose loss : 0.04321364382470864   3d marker loss : 0.06190382321027742   angle loss : 0.040264931645082394   bone scale loss : 0.006681449611441813   
+Valid, Epoch 39 : : total loss : 0.22502203205533122   3d pose loss : 0.06695854400305865   3d marker loss : 0.08898238162389993   angle loss : 0.05331905281710642   bone scale loss : 0.015762053951675962   
+Current LR:  [7.967561308335696e-05]
+Train , Epoch 40 : : total loss : 0.15005030156909555   3d pose loss : 0.042512512455383934   3d marker loss : 0.061027128443769785   angle loss : 0.039922701394644336   bone scale loss : 0.006587959354932326   
+Valid, Epoch 40 : : total loss : 0.22939530873702743   3d pose loss : 0.06913936911212581   3d marker loss : 0.09008747203084767   angle loss : 0.05392282111906531   bone scale loss : 0.01624564710090331   
+Current LR:  [7.609993734115733e-05]
+Train , Epoch 41 : : total loss : 0.14768510545077532   3d pose loss : 0.04166705123540284   3d marker loss : 0.05997007239771926   angle loss : 0.039524555681408315   bone scale loss : 0.00652342626447047   
+Valid, Epoch 41 : : total loss : 0.2246280074910197   3d pose loss : 0.06724500739583217   3d marker loss : 0.08715664558579313   angle loss : 0.05418833626836385   bone scale loss : 0.01603802098627027   
+Current LR:  [7.268473048672112e-05]
+Train , Epoch 42 : : total loss : 0.14707363008157068   3d pose loss : 0.04155658638995627   3d marker loss : 0.059679294593524244   angle loss : 0.03931432508904001   bone scale loss : 0.006523424565144207   
+Valid, Epoch 42 : : total loss : 0.22185327941737107   3d pose loss : 0.0656467026968431   3d marker loss : 0.0870891418541365   angle loss : 0.053220531654076794   bone scale loss : 0.0158969052108492   
+Current LR:  [6.942279101023687e-05]
+Train , Epoch 43 : : total loss : 0.14434715995322103   3d pose loss : 0.04051501060957494   3d marker loss : 0.05845398581114368   angle loss : 0.03899945243113283   bone scale loss : 0.006378711498193983   
+Valid, Epoch 43 : : total loss : 0.22112485267875295   3d pose loss : 0.06585120386118035   3d marker loss : 0.08651404813008881   angle loss : 0.05270518216475372   bone scale loss : 0.01605442187192252   
+Current LR:  [6.630724059067003e-05]
+Train , Epoch 44 : : total loss : 0.142636104899904   3d pose loss : 0.0399869068917157   3d marker loss : 0.057693423568338585   angle loss : 0.03864658022488373   bone scale loss : 0.006309194264906472   
+Valid, Epoch 44 : : total loss : 0.21779908673589338   3d pose loss : 0.06448940731799155   3d marker loss : 0.08492008587324891   angle loss : 0.05233363013278059   bone scale loss : 0.01605596410367273   
+Current LR:  [6.333150959172302e-05]
+Train , Epoch 45 : : total loss : 0.14083399954049483   3d pose loss : 0.03942620406548182   3d marker loss : 0.056872931651879045   angle loss : 0.03827401725710302   bone scale loss : 0.006260847267897233   
+Valid, Epoch 45 : : total loss : 0.225053179325562   3d pose loss : 0.06666610613410405   3d marker loss : 0.08809507306042012   angle loss : 0.054003546627989216   bone scale loss : 0.016288454502315846   
+Current LR:  [6.048932320870654e-05]
+Train , Epoch 46 : : total loss : 0.1397031415199888   3d pose loss : 0.03908812974890073   3d marker loss : 0.05646172485489776   angle loss : 0.03798487733887589   bone scale loss : 0.006168409827016834   
+Valid, Epoch 46 : : total loss : 0.22267686152335203   3d pose loss : 0.06727214257508055   3d marker loss : 0.08679235833659274   angle loss : 0.05265758598913756   bone scale loss : 0.01595477549003694   
+Current LR:  [5.777468823711038e-05]
+Train , Epoch 47 : : total loss : 0.13821124879346378   3d pose loss : 0.03846569492117218   3d marker loss : 0.05577509807071824   angle loss : 0.03787171144200408   bone scale loss : 0.006098744265087273   
+Valid, Epoch 47 : : total loss : 0.22110512384879913   3d pose loss : 0.06532464202221651   3d marker loss : 0.08633241252857003   angle loss : 0.05327721615442038   bone scale loss : 0.016170851683124692   
+Current LR:  [5.518188043497332e-05]
+Train , Epoch 48 : : total loss : 0.1372609379282896   3d pose loss : 0.0382311233251855   3d marker loss : 0.05539500849402469   angle loss : 0.0375335932749769   bone scale loss : 0.006101213006869607   
+Valid, Epoch 48 : : total loss : 0.22622000090585706   3d pose loss : 0.0681584526180079   3d marker loss : 0.0877512773346532   angle loss : 0.05316792706311759   bone scale loss : 0.017142344054792764   
+Current LR:  [5.270543245240348e-05]
+Train , Epoch 49 : : total loss : 0.13714220655569132   3d pose loss : 0.03824062264267949   3d marker loss : 0.05533094016322191   angle loss : 0.03748507477019144   bone scale loss : 0.0060855700499445635   
+Valid, Epoch 49 : : total loss : 0.22058106751325995   3d pose loss : 0.06613327082941088   3d marker loss : 0.08606511095295781   angle loss : 0.052497879142873675   bone scale loss : 0.01588480921246677   
+Current LR:  [5.0340122302796785e-05]
+Train , Epoch 50 : : total loss : 0.13587916674821274   3d pose loss : 0.037847212037962416   3d marker loss : 0.05478439605322437   angle loss : 0.03721001084516014   bone scale loss : 0.006037548023775436   
+Valid, Epoch 50 : : total loss : 0.21544897477242028   3d pose loss : 0.06366483534445373   3d marker loss : 0.08364502436638581   angle loss : 0.052560754312516667   bone scale loss : 0.015578360342768596   
+Current LR:  [4.808096235144308e-05]
+Train , Epoch 51 : : total loss : 0.13506082153838614   3d pose loss : 0.037549860176184904   3d marker loss : 0.054371014485756555   angle loss : 0.03708129359976105   bone scale loss : 0.0060586535938732   
+Valid, Epoch 51 : : total loss : 0.21527955614650784   3d pose loss : 0.06363731688581677   3d marker loss : 0.08347420887465677   angle loss : 0.05270388663122561   bone scale loss : 0.015464144611323503   
+Current LR:  [4.592318879830075e-05]
+Train , Epoch 52 : : total loss : 0.13340597908565963   3d pose loss : 0.03691182715845281   3d marker loss : 0.0536841644541077   angle loss : 0.03687963723272517   bone scale loss : 0.005930350500874329   
+Valid, Epoch 52 : : total loss : 0.2151727950476335   3d pose loss : 0.0635968114667371   3d marker loss : 0.08307708425388322   angle loss : 0.05251101627890995   bone scale loss : 0.01598788368499885   
+Current LR:  [4.386225163276248e-05]
+Train , Epoch 53 : : total loss : 0.13210706093173097   3d pose loss : 0.03652240133479885   3d marker loss : 0.05312150442513867   angle loss : 0.03657395416411801   bone scale loss : 0.005889201366707035   
+Valid, Epoch 53 : : total loss : 0.21404978714186038   3d pose loss : 0.06316354446931191   3d marker loss : 0.08263623868180446   angle loss : 0.05209595395434667   bone scale loss : 0.016154050903893078   
+Current LR:  [4.1893805039230266e-05]
+Train , Epoch 54 : : total loss : 0.13135463489570479   3d pose loss : 0.036280623807207396   3d marker loss : 0.05278682908502178   angle loss : 0.03645412418721379   bone scale loss : 0.0058330579822802025   
+Valid, Epoch 54 : : total loss : 0.21664449688961335   3d pose loss : 0.06478174890589872   3d marker loss : 0.08367847869215243   angle loss : 0.052282863973956296   bone scale loss : 0.01590140624000645   
+Current LR:  [4.001369823326824e-05]
+Train , Epoch 55 : : total loss : 0.12998055759547414   3d pose loss : 0.035823104832915294   3d marker loss : 0.05222187605888947   angle loss : 0.036158534150192705   bone scale loss : 0.005777042252484007   
+Valid, Epoch 55 : : total loss : 0.21755704567023035   3d pose loss : 0.06489739122861611   3d marker loss : 0.08453876935302465   angle loss : 0.05222361858223147   bone scale loss : 0.015897265331395512   
+Current LR:  [3.821796670900991e-05]
+Train , Epoch 56 : : total loss : 0.12914922945741295   3d pose loss : 0.03554158448309138   3d marker loss : 0.051863661300444945   angle loss : 0.03598305718514366   bone scale loss : 0.005760926908502976   
+Valid, Epoch 56 : : total loss : 0.21485263087245235   3d pose loss : 0.06322015860367103   3d marker loss : 0.0833557999652365   angle loss : 0.052766860541650806   bone scale loss : 0.015509812354865808   
+Current LR:  [3.650282387936352e-05]
+Train , Epoch 57 : : total loss : 0.1287885135282641   3d pose loss : 0.03542953850566477   3d marker loss : 0.05170108559338943   angle loss : 0.035925004550296326   bone scale loss : 0.0057328850975719055   
+Valid, Epoch 57 : : total loss : 0.21600169773565642   3d pose loss : 0.06422376263730212   3d marker loss : 0.08360967130105813   angle loss : 0.052291231025380955   bone scale loss : 0.015877030630628237   
+Current LR:  [3.486465309138762e-05]
+Train , Epoch 58 : : total loss : 0.12782853299724883   3d pose loss : 0.035109907194324164   3d marker loss : 0.051278291275535806   angle loss : 0.03574005973295889   bone scale loss : 0.005700274801178687   
+Valid, Epoch 58 : : total loss : 0.2137739161137895   3d pose loss : 0.06394293432123273   3d marker loss : 0.08289196689777191   angle loss : 0.051328446114862675   bone scale loss : 0.015610568977579441   
+Current LR:  [3.329999999999998e-05]
+Train , Epoch 59 : : total loss : 0.12726900512757508   3d pose loss : 0.03502581841919733   3d marker loss : 0.05108902662776518   angle loss : 0.03551860617986624   bone scale loss : 0.005635553861603789   
+Valid, Epoch 59 : : total loss : 0.2184348380469011   3d pose loss : 0.06534841997094601   3d marker loss : 0.08449270370345653   angle loss : 0.052593878682431004   bone scale loss : 0.015999835602219875   
+Training with lr from 3.33e-06 to 1e-06 in 2 epochs.
+LR decay rate : 0.3003003003003003
+Train , Epoch 60 : : total loss : 0.12517545491025067   3d pose loss : 0.03405839204248311   3d marker loss : 0.05004285958366118   angle loss : 0.03544153792486675   bone scale loss : 0.0056326658775409065   
+Valid, Epoch 60 : : total loss : 0.2109530871636567   3d pose loss : 0.062375546643728706   3d marker loss : 0.08114090665087774   angle loss : 0.051723592493932914   bone scale loss : 0.01571304252811803   
+Current LR:  [1e-06]
+Train , Epoch 61 : : total loss : 0.12338566952857419   3d pose loss : 0.03341679228064807   3d marker loss : 0.049320954548707906   angle loss : 0.035072863247731456   bone scale loss : 0.005575059249025324   
+Valid, Epoch 61 : : total loss : 0.2134416621664296   3d pose loss : 0.06327990398041536   3d marker loss : 0.08215837067510595   angle loss : 0.05184117278019646   bone scale loss : 0.016162214642864162   
+Finished Training
+Load  /tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/model_60_OS_BASE.pt
+layer3 uses center striding.
+Use ResNet50 Next with center striding and Petrained model
+Image size : (256, 256)
+test set : total loss : 0.1291550234616813   3d pose loss : 0.03319352374238483   3d marker loss : 0.04338882241208675   angle loss : 0.040081292522155636   bone scale loss : 0.012491384966898772   

@@ -1,0 +1,16 @@
+# my_project/experiment.yaml
+PASCAL_PATH : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/PASCAL/pascal.hdf5"
+BML_FOLDER : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/HDF5/BML/"
+MODEL_FOLDER : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/"
+STARTMODELPATH : "/tudelft.net/staff-bulk/ewi/insy/VisionLab/students/wyang/dataset/models/model_26_BML_IMG.pt"
+WORKERS  : 16
+EVAL_WORKERS : 16
+VALID_WORKERS : 16
+PROGRESSBAR  : False
+TRAINING:
+  EVALUATION_BATCHSIZE : 64
+DATASET:
+  TRAINING_USEDEACHFRAME : 2
+
+
+

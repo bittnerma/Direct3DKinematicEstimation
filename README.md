@@ -32,13 +32,14 @@
     + Download v3d files (F_Subjects_1_45.tar).
 2. [AMASS](https://amass.is.tue.mpg.de/index.html)
     + Download SMPL+H body data of BMLmovi.
-3. [SMPL+H Models](https://mano.is.tue.mpg.de/en)
+3. [SMPL+H Models](https://mano.is.tue.mpg.de/index.html)
     + Register to get access to the downloads section.
     + Download the extended SMPL+H model (used in AMASS project).
 4. [DMPLs](https://smpl.is.tue.mpg.de/index.html)
     + Register to get access to the downloads section.
     + Download DMPLs for AMASS.
-5. [PASCAL Visual Object Classes](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
+5. [PASCAL Visual Object Classes](http://host.robots.ox.ac.uk/pascal/VOC/voc2012)
+    + Download the training/validation data
 
 
 ## OpenSim GT Generation 

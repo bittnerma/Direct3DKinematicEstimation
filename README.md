@@ -1,5 +1,6 @@
-# Estimating human musculoskeletal model using neural networks from monocular video
+# Towards single camera human 3D-kinematics
 
+<p class="callout info">This repository is currently under construction</p>
 
 ## Installation
 1. Requirement
@@ -41,6 +42,13 @@
 5. [PASCAL Visual Object Classes](http://host.robots.ox.ac.uk/pascal/VOC/voc2012)
     + Download the training/validation data
 
+## Unpacking resources
+
+1. Unpack the downloaded SMPL and DMPL archives into ms_model_estimation/resources
+
+2. Unpack the downloaded AMASS data into dataset/amass
+
+3. Unpack the F_Subjects_1_45 folder and unpack content of all subfolders into dataset/BMLMovi/v3d/F
 
 ## OpenSim GT Generation 
 

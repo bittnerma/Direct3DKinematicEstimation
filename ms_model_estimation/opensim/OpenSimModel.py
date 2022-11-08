@@ -439,8 +439,10 @@ class OpenSimModel:
         assert self.scaledModelPath is not None
 
         scaleTool = opensim.ScaleTool(self.scalingXMLFilePath)
-        success = scaleTool.run()
-        if not success:
+
+        try:
+            success = scaleTool.run()
+        except:
             raise Exception("Body scaling fails!")
 
         if post_scaling_processing:

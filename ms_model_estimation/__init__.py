@@ -1,11 +1,12 @@
-DIR = "D:/mscWeitseYang/videoMuscle/"
-BM_PATH_N = DIR + 'model/smplh/SMPLH_NEUTRAL.npz'
-BM_PATH_F = DIR + 'model/smplh/SMPLH_FEMALE.npz'
-BM_PATH_M = DIR + 'model/smplh/SMPLH_MALE.npz'
+from pathlib import Path
+DIR = Path(__file__).parent / "resources"
+BM_PATH_N = str(DIR / Path('smplh/neutral/model.npz'))
+BM_PATH_F = str(DIR / Path('smplh/female/model.npz'))
+BM_PATH_M = str(DIR / Path('smplh/male/model.npz'))
 
-DMPL_PATH_N = DIR + 'model/dmpls/neutral/model.npz'
-DMPL_PATH_F = DIR + 'model/dmpls/female/model.npz'
-DMPL_PATH_M = DIR + 'model/dmpls/male/model.npz'
+DMPL_PATH_N = str(DIR / Path('dmpls/neutral/model.npz'))
+DMPL_PATH_F = str(DIR / Path('dmpls/female/model.npz'))
+DMPL_PATH_M = str(DIR / Path('dmpls/male/model.npz'))
 
 NUM_BETAS = 16
 NUM_DMPLS = 8

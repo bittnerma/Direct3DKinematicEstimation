@@ -1,7 +1,7 @@
 import math
 import trimesh
-from ms_model_estimation.smplh.BodyModel import BodyModel
-from ms_model_estimation.smplh.omni_tools import copy2cpu as c2c
+from ms_model_estimation.smplh_util.BodyModel import BodyModel
+from ms_model_estimation.smplh_util.omni_tools import copy2cpu as c2c
 from ms_model_estimation import BM_PATH_M, BM_PATH_N, BM_PATH_F, NUM_BETAS, NUM_DMPLS, DMPL_PATH_M, DMPL_PATH_N, DMPL_PATH_F
 import torch
 import numpy as np

@@ -4,7 +4,7 @@ import h5py
 import torch
 import pickle
 import pandas as pd
-from opensim.DataReader import DataReader
+from ms_model_estimation.opensim.DataReader import DataReader
 from ms_model_estimation.models.openSim.OpenSimNode import OpenSimNode
 from ms_model_estimation.models.openSim.OpenSimTreeLayer import OpenSimTreeLayer
 from ms_model_estimation.models.camera.cameralib import *

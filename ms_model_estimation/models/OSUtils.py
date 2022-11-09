@@ -1,6 +1,6 @@
 from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint, Joints_Inside_Cylinder_Body
 import numpy as np
-from ms_model_estimation.smplh.scalingIKInf import IKTaskSet
+from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet
 
 # predicted coordinates and their mirror
 PredictedCoordinates = [

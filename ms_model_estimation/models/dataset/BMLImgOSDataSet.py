@@ -2,12 +2,12 @@ import os
 import h5py
 import torch
 import numpy as np
-from ms_model_estimation.models.dataset.ImageDataSet import ImageDataSet
+from ms_model_estimation.models.dataset.TorchDataset import TorchDataset
 from ms_model_estimation.models.dataset.data_loading import load_and_transform3d
 from ms_model_estimation.models.OSUtils import MIRROR_JOINTS
 
 
-class BMLImgDataSet(ImageDataSet):
+class BMLImgDataSet(TorchDataset):
 
     def __init__(
             self, cfg, h5pyBMLFolder, cameraParamter, dataseType, evaluation=True, useEveryFrame=False,

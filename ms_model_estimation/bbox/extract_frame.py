@@ -34,6 +34,7 @@ def extract_frame_from_video(
             ret, frame = cap.read()
             assert ret
             imgDataset[i, :, :, :] = frame
+            print(f"\r Processing frame {i} | {numFrames}")
 
     print(f'{path} is processed.')
 

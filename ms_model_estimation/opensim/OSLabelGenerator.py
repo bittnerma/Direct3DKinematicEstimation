@@ -10,12 +10,12 @@ from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 from ms_model_estimation.opensim.OpenSimModel import OpenSimModel
 from ms_model_estimation.opensim.DataReader import DataReader
 from ms_model_estimation.pyOpenSim.ScaleIKSet import IKSet, ScaleSet
-from ms_model_estimation.smplh.SMPLHModel import SMPLHModel
+from ms_model_estimation.smplh_util.SMPLHModel import SMPLHModel
 import numpy as np
 import scipy.io
 from glob import glob
 from ms_model_estimation import Postscaling_LockedCoordinates, Postscaling_UnlockedConstraints, ChangingParentMarkers
-from ms_model_estimation.smplh.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
+from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
 
 
 class AmassOpenSimGTGenerator:

@@ -20,7 +20,7 @@ class BMLBBoxGenerator(BBoxGenerator):
             numFrames = f["numFrames"][0]
             name = f["name"][0]
             bboxes = np.zeros((numFrames, 4))
-            for i in range(numFrames):
+            for i in tqdm(range(numFrames)):
                 frame = f["images"][i, :, :, :]
 
                 frame, offset = BBoxGenerator.check_ImgSize(frame)
@@ -34,6 +34,9 @@ class BMLBBoxGenerator(BBoxGenerator):
                         bboxes[i, :] = bboxes[i - 1, :].copy()
                 else:
                     bboxes[i, :] = results[0]
+
+                if i == 20:
+                    break
 
         path = path.replace("_img.hdf5", "_bbox.npy")
         np.save(path, bboxes)

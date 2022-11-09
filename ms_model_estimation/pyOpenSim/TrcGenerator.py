@@ -1,6 +1,6 @@
 import pickle
-from ms_model_estimation.smplh.smplh_vertex_index import smplHJoint, smplHMarker
-from ms_model_estimation.smplh.SMPLHModel import SMPLHModel
+from ms_model_estimation.smplh_util.constants.smplh_vertex_index import smplHJoint, smplHMarker
+from ms_model_estimation.smplh_util.SMPLHModel import SMPLHModel
 import numpy as np
 
 

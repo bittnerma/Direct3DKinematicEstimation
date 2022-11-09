@@ -3,9 +3,9 @@ import math
 import sys
 sys.path.append("/home/WTYANG/thesis/ms_model_estimation")
 import torch
-from ms_model_estimation.models.DataSet_Pose import ImageDataSet
+from ms_model_estimation.models.dataset import TorchDataset
 from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
-from ms_model_estimation.models.CustomLoss import CustomLoss
+from ms_model_estimation.models.loss.CustomLoss import CustomLoss
 from ms_model_estimation import PredictedMarkers
 from ms_model_estimation.smplh.smplh_vertex_index import smplHJoint
 from torch.utils.data import DataLoader
@@ -47,7 +47,7 @@ class Training:
         self.perspective_correction = args.perspective_correction
         self.projection2d = args.projection2d
         self.inputSize = args.inputSize
-        self.trainSet = ImageDataSet(
+        self.trainSet = TorchDataset(
             args.inputSize, self.trainPath, self.trainImgPath, self.cameraParameterPath,
             fpsRatio=args.fpsRatio, evaluation=False, p=args.occlusionProb,
             zoomProb=args.zoomProb, cropRatio=args.cropRatio, rectangleSize=args.rectangleSize,
@@ -55,14 +55,14 @@ class Training:
             numImage=2000, multipleImgDataset=True, maxIdx=6
         )
 
-        self.validationSet = ImageDataSet(
+        self.validationSet = TorchDataset(
             args.inputSize, self.validPath, self.validImgPath, self.cameraParameterPath,
             fpsRatio=args.fpsRatio, evaluation=True,
             perspective_correction=self.perspective_correction, projection2d=self.projection2d,
             numImage=2000, multipleImgDataset=True, maxIdx=0
         )
 
-        self.testSet = ImageDataSet(
+        self.testSet = TorchDataset(
             args.inputSize, self.testPath, self.testImgPath, self.cameraParameterPath,
             fpsRatio=args.fpsRatio, evaluation=True,
             perspective_correction=self.perspective_correction, projection2d=self.projection2d,

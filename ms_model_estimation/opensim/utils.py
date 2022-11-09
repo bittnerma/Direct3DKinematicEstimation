@@ -95,7 +95,7 @@ def set_axes(axes: list) -> str:
     return a
 
 '''
-def convert_vtp_to_obj(folder: str, meshFolder: str, meshList: list, prefix="videoMuscle_"):
+def convert_vtp_to_obj(folder: str, meshFolder: str, meshList: list, prefix="ms_model_estimation_"):
     for file in meshList:
         if '.' not in file:
             file += '.vtp'

@@ -1,0 +1,90 @@
+from yacs.config import CfgNode as CN
+
+_C = CN()
+
+# Random seed
+_C.SEED = 100
+_C.WORKERS = 1
+_C.EVAL_WORKERS = 1
+_C.VALID_WORKERS = 1
+
+# Test mode
+_C.TESTMODE = False
+
+
+# Training setting
+
+# BatchSize
+_C.TRAINING = CN()
+_C.TRAINING.BATCHSIZE = 64
+_C.TRAINING.EVALUATION_BATCHSIZE = 64
+_C.TRAINING.VALID_BATCHSIZE = 64
+
+# Model setting
+_C.MODEL = CN()
+
+# Image Size
+_C.MODEL.IMGSIZE = (256, 256)
+
+# Setting for the ResNet50
+_C.MODEL.RESNET = CN()
+# Use ResNet50 Next
+_C.MODEL.RESNET.NEXT = True
+_C.MODEL.RESNET.PRETRAINED = True
+# Center striding
+_C.MODEL.RESNET.CENTER_STRIDING = True
+
+# Setting for the metric-scale prediction
+_C.MODEL.METRIC_SCALE = CN()
+_C.MODEL.METRIC_SCALE.DEPTH = 8
+_C.MODEL.METRIC_SCALE.STRIDING = 32
+_C.MODEL.METRIC_SCALE.EVAL_STRIDING = 4
+_C.MODEL.METRIC_SCALE.BBOX_SIZE = 2.2
+
+# Dataset setting
+_C.DATASET = CN()
+_C.DATASET.DATASETPERIMG = 2000
+
+
+# Metrab data augmentation
+
+# BBox
+_C.DATASET.BBOX = CN()
+_C.DATASET.BBOX.PARTIAL_VISUALBILITY = False
+
+# Geometric Augmentation
+_C.DATASET.GEOM = CN()
+_C.DATASET.GEOM.AUG = True
+_C.DATASET.GEOM.HFLIP = True
+_C.DATASET.GEOM.SHIFT_AUG = 10
+_C.DATASET.GEOM.SCALE_DOWN = 25
+_C.DATASET.GEOM.SCALE_UP = 25
+_C.DATASET.GEOM.ROT = 20
+
+# interpolation
+_C.DATASET.INTERPOLATION = CN()
+_C.DATASET.INTERPOLATION.TRAIN = 'nearest'
+_C.DATASET.INTERPOLATION.TEST = 'linear'
+
+# antialias
+_C.DATASET.ANTIALIAS = CN()
+_C.DATASET.ANTIALIAS.TRAIN = 1
+_C.DATASET.ANTIALIAS.TEST = 4
+
+# occlusion
+_C.DATASET.OCCLUSION = CN()
+_C.DATASET.OCCLUSION.PROB = 0.7
+_C.DATASET.OCCLUSION.SCALE = 0.8
+
+# color
+_C.DATASET.COLOR = CN()
+_C.DATASET.COLOR.AUG = True
+
+# checkpoint
+_C.STARTMODELPATH = None
+
+# display progress bar
+_C.PROGRESSBAR = True
+
+def get_cfg_defaults():
+    return _C.clone()

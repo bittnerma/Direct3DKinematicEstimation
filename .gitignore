@@ -214,3 +214,4 @@ dataset/opensim/BMLmovi/temp_scale_setUp.xml
 # Ignore test files
 
 test_*.py
+_tmp

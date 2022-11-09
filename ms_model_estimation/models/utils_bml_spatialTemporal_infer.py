@@ -15,8 +15,8 @@ from ms_model_estimation.models.camera.cameralib import Camera
 from tqdm import tqdm, trange
 import time
 from ms_model_estimation.models.TorchTrainingProgram import TorchTrainingProgram
-from ms_model_estimation.smplh.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
-from opensim.DataReader import DataReader
+from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
+from ms_model_estimation.opensim.DataReader import DataReader
 #from ms_model_estimation.OpenSimModel import OpenSimModel
 from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 import multiprocessing as mp

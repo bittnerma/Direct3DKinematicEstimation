@@ -4,6 +4,7 @@ from ms_model_estimation.bbox.BBoxGenerator import BBoxGenerator
 import numpy as np
 from glob import glob
 from tqdm import tqdm
+from pathlib import Path
 
 
 class BMLBBoxGenerator(BBoxGenerator):
@@ -11,9 +12,12 @@ class BMLBBoxGenerator(BBoxGenerator):
     def __init__(self, hdf5Folder):
         super(BMLBBoxGenerator, self).__init__()
         self.hdf5Folder = hdf5Folder if hdf5Folder.endswith("/") else hdf5Folder + "/"
+        # self.subfolder = Path(self.hdf5Folder + "bounding_boxes")
+        # if not self.subfolder.exists():
+        #     self.subfolder.mkdir(parents=True)
 
     def generate_bbox_from_video(
-            self, path):
+            self, path):        
 
         with h5py.File(path, 'r') as f:
 
@@ -34,10 +38,7 @@ class BMLBBoxGenerator(BBoxGenerator):
                         bboxes[i, :] = bboxes[i - 1, :].copy()
                 else:
                     bboxes[i, :] = results[0]
-
-                if i == 20:
-                    break
-
+                
         path = path.replace("_img.hdf5", "_bbox.npy")
         np.save(path, bboxes)
 
@@ -47,7 +48,7 @@ class BMLBBoxGenerator(BBoxGenerator):
         files = [f.replace("\\", "/") for f in files]
         return files
 
-    def coolect_all_bbox(self):
+    def collect_all_bbox(self):
 
         files = glob(self.hdf5Folder + "*_bbox.npy")
         files = [f.replace("\\", "/") for f in files]
@@ -62,6 +63,16 @@ class BMLBBoxGenerator(BBoxGenerator):
 
         np.save(self.hdf5Folder + "all_bbox.npy", bboxTable)
 
+    def cleanup(self):
+        assert(Path(self.hdf5Folder + "all_bbox.npy").exists())            
+            
+        for bbox_file in Path(self.hdf5Folder).glob("[0-9]*.npy"):
+            if "all" in bbox_file:
+                continue
+            bbox_file.unlink()
+
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -72,4 +83,4 @@ if __name__ == "__main__":
     files = generator.generate()
     for f in tqdm(files):
         generator.generate_bbox_from_video(f)
-    generator.coolect_all_bbox()
+    generator.collect_all_bbox()

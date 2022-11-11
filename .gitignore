@@ -113,6 +113,8 @@ ipython_config.py
 #   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
 
+*.code-workspace
+
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
@@ -190,16 +192,17 @@ cython_debug/
 
 experiemnts/
 
-dataset/amass/*
-dataset/BMLMovi/v3d/F/*
+resources/amass/*
+resources/BMLMovi/v3d/F/*
 
-dataset/opensim/BMLmovi/BMLmovi/*
+resources/opensim/BMLmovi/BMLmovi/*
 
 
 ms_model_estimation/resources/
 
-dataset/opensim/BMLmovi/temp_scale_setUp_*.xml
-dataset/opensim/BMLmovi/temp_scale_setUp.xml
+resources/opensim/BMLmovi/temp_scale_setUp_*.xml
+resources/opensim/BMLmovi/temp_scale_setUp.xml
+_dataset/*
 
 # Ignore archives
 *.tar

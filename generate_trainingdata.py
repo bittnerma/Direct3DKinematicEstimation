@@ -1,5 +1,6 @@
+from pathlib import Path
 import sys
-sys.path.append(r"E:\Users\Marian\Projects\VideoJointAngle\Code\Direct3DKinematicEstimation\ms_model_estimation")
+sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
 ## GT Generation imports
 from ms_model_estimation.opensim.OpenSimModel import OpenSimModel
 from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
@@ -13,20 +14,20 @@ from ms_model_estimation.bbox.BMLBBoxGenerator import BMLBBoxGenerator
 from ms_model_estimation.models.hdf5.bml import search_bml_data_list,create_h5py
 from ms_model_estimation.bbox.generate_index import generate_idx_file
 
-import pickle
-from pathlib import Path
+import pickle as pkl
 from tqdm import tqdm
-
 
 parent_dir = Path(__file__).parent
 
-modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body.osim").as_posix())
+
+# modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body.osim").as_posix())
+modelPath=str((parent_dir / "resources/opensim/full_body_wo_hands.osim").as_posix())
 amassFolder=str((parent_dir / "resources/amass/").as_posix())
 v3dFolder = str((parent_dir / "resources/BMLmovi/v3d/F/").as_posix())
 
 videoFolder = str(Path("E:/Users/Marian/Projects/VideoJointAngle/Data/BMLTestVideo/").as_posix())
 
-outputFolder = str((parent_dir / "_dataset").as_posix())
+outputFolder = str((parent_dir / "_dataset_full").as_posix())
 
 opensimGTFolder = str((parent_dir / "resources/opensim/BMLmovi/BMLmovi").as_posix())
 
@@ -69,6 +70,8 @@ generator.collect_all_bbox()
 generate_idx_file(v3dFolder, outputFolder)
 
 table = search_bml_data_list(outputFolder, opensimGTFolder, modelPath)
+
+pkl.dump(table['pyBaseModel'],open(outputFolder+'/pyBaseModel.pkl','wb'))
 
 subject_ids = list(table['df'].subjectID.unique())
 for s_id in subject_ids:

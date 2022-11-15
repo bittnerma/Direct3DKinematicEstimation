@@ -200,15 +200,19 @@ resources/opensim/BMLmovi/BMLmovi/*
 
 ms_model_estimation/resources/
 
+
 resources/opensim/BMLmovi/temp_scale_setUp_*.xml
 resources/opensim/BMLmovi/temp_scale_setUp.xml
 _dataset/*
+_dataset_full/*
+checkpoints/*
 
 # Ignore archives
 *.tar
 *.zip
 *.pkl
 *.bz2
+*.npy
 
 # Ignore OpenSim output files
 *.sto

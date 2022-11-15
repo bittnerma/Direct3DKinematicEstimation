@@ -29,12 +29,15 @@ class OpenSimTemporalModel(nn.Module):
 
         if self.cfg.MODEL.POS:
             # reshape to 1d vector( B x S x feature sizes)
-            predPos = x["predPos"]
+            if "predMarkerPos" in x:
+                predPos = x["predPos"]
+                predMarkerPos = x["predMarkerPos"]
+            else:
+                predPos = x["predPos"][:,:,:50,:]
+                predMarkerPos = x["predPos"][:,:,50:,:]
+
             predPos1d = predPos.view((B, S, -1))
-
-            predMarkerPos = x["predMarkerPos"]
             predMarkerPos1d = predMarkerPos.view((B, S, -1))
-
         predBoneScale = x["predBoneScale"]
         predBoneScale1d = predBoneScale.view((B, S, -1))
 

@@ -33,6 +33,9 @@ class BMLImgDataSet(TorchDataset):
             # self.data = np.load(h5pyBMLFolder + "prediction_valid.npy", allow_pickle=True).item()
         elif dataseType == 2:
             self.usedSubjects = self.cfg.TEST_SUBJECTS
+        #HACK: added by Marian 
+        elif dataseType == 3:
+            self.usedSubjects = [11]
             # self.data = np.load(h5pyBMLFolder + "prediction_test.npy", allow_pickle=True).item()
         else:
             raise Exception("The type of the dataset are not defined")

@@ -1,6 +1,0 @@
-# my_project/experiment.yaml
-TRAINING:
-  RESNET:
-    NEXT: True
-  TRAINING_STEPS : 1
-  EPOCH : [1]

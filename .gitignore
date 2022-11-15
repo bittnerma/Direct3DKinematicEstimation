@@ -190,7 +190,7 @@ cython_debug/
 ## Custom entries
 
 
-experiemnts/
+# experiemnts/
 
 # resources/amass/*
 # resources/BMLMovi/v3d/F/*

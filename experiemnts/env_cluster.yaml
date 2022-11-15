@@ -1,8 +1,0 @@
-# my_project/experiment.yaml
-WORKERS : 16
-TRAINING:
-  EPOCH : [30,2]
-  EVALUATION_BATCHSIZE : 32
-DATASET:
-  TRAINING_USEDEACHFRAME : 1
-

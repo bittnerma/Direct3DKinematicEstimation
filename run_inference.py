@@ -25,10 +25,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--cpu', action='store_true', default=False, help="only use cpu?")
-    parser.add_argument('--evaluation', action='store_true', default=False, help="only use cpu?")
-    parser.add_argument('--ymlFile', action='store',
-                        default="", type=str,
-                        help="The hdf5 folder")
+    parser.add_argument('--evaluation', action='store_true', default=False, help="only use cpu?")    
 
     args = parser.parse_args()    
     

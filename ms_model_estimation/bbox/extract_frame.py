@@ -4,24 +4,24 @@ import cv2
 import h5py
 import numpy as np
 import multiprocessing as mp
+from tqdm import tqdm
 
 
 def extract_frame_from_video(
         videoPath, outputFolder
 ):
-    inf = videoPath.split("/")[-1]
-    subjectID = int(inf.split("_")[-2])
+    _,cameraType,_,subjectID,_ = videoPath.stem.split("_")
 
-    cap = cv2.VideoCapture(videoPath)
+    cap = cv2.VideoCapture(str(videoPath))
     fps = int(cap.get(cv2.CAP_PROP_FPS))
     numFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    cameraType = videoPath.split("/")[-1].split("_")[1]
+    
     assert fps > 0
-    path = outputFolder + f'{subjectID}_{cameraType}_img.hdf5'
+    path = outputFolder / f'{subjectID}_{cameraType}_img.hdf5'
     with h5py.File(path, 'w') as f:
         nameD = f.create_dataset(f'name', (1,), dtype='S150', compression="gzip",
                                  compression_opts=9)
-        nameD[:] = inf.encode()
+        nameD[:] = videoPath.name.encode()
 
         frameD = f.create_dataset(f'numFrames', (1,), dtype='i8', compression="gzip",
                                   compression_opts=9)
@@ -29,12 +29,14 @@ def extract_frame_from_video(
 
         imgDataset = f.create_dataset(f'images', (numFrames, 600, 800, 3), dtype=np.uint8, compression="gzip",
                                       compression_opts=9, chunks=(1, 600, 800, 3))
-
-        for i in range(numFrames):
+        pbar = tqdm(range(numFrames))
+        pbar.set_description(f"{videoPath.stem}")
+        for i in pbar:
+            
             ret, frame = cap.read()
             assert ret
             imgDataset[i, :, :, :] = frame
-            print(f"\r Processing frame {i} | {numFrames}")
+            # print(f"\r Processing frame {i} | {numFrames}")
 
     print(f'{path} is processed.')
 

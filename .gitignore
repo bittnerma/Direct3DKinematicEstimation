@@ -192,8 +192,8 @@ cython_debug/
 
 experiemnts/
 
-resources/amass/*
-resources/BMLMovi/v3d/F/*
+# resources/amass/*
+# resources/BMLMovi/v3d/F/*
 
 resources/opensim/BMLmovi/BMLmovi/*
 

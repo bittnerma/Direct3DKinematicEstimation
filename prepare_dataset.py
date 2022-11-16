@@ -7,6 +7,7 @@ from ms_model_estimation.bbox.extract_frame import extract_frame_from_video,sear
 from ms_model_estimation.bbox.BMLBBoxGenerator import BMLBBoxGenerator
 from ms_model_estimation.models.hdf5.bml import search_bml_data_list,create_h5py
 from ms_model_estimation.bbox.generate_index import generate_idx_file
+from ms_model_estimation.models.hdf5.pascal import load_occluders
 
 import pickle as pkl
 from tqdm import tqdm
@@ -29,13 +30,35 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--BMLMoviDir', action='store',
-                        default="", type=str,
+                        default=None, type=str,
                         help="Folder containing the BMLMovi videos from recording round F")
 
+    parser.add_argument('--PascalDir', action='store',
+                        default=None, type=str,
+                        help="Folder containing the Pascal VOC dataset")
+
     args = parser.parse_args()    
+        
+    if args.BMLMoviDir is None:
+        raise(Exception("No BMLMovi path provided"))
+
+    videoFolder = Path(args.BMLMoviDir)
+
+    if not videoFolder.exists():
+        raise(FileNotFoundError("Cannot find provided BMLMovi directory"))
+
+
+    if args.PascalDir is None:
+        print("No pascal path provided, skipping pascal.hdf generation")
     
-    videoFolder= args.BMLMoviDir 
-    videoFolder = Path(videoFolder)
+    else:    
+        pascal_root = Path(args.PascalDir)
+
+        if pascal_root.exists():
+            print("Create pascal.hdf5")
+            load_occluders(outputFolder, pascal_root)
+        else:
+            raise(FileNotFoundError("Cannot find provided Pascal directory"))
 
     ## Generate HDF dataset
     # Extact images to .hdf5 files

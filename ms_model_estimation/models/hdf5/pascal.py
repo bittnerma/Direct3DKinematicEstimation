@@ -11,13 +11,15 @@ from pathlib import Path
 
 
 def load_occluders(outputFolder, pascal_root):
-    outputFolder = outputFolder if outputFolder.endswith("/") else outputFolder + "/"
-    Path(outputFolder).mkdir(parents=True, exist_ok=True)
+    outputFolder = Path(outputFolder)
+    pascal_root = Path(pascal_root)
+    
+    outputFolder.mkdir(parents=True, exist_ok=True)
 
     currentIdx = 0
-    with h5py.File(outputFolder + "pascal.hdf5", 'w') as f:
+    with h5py.File(outputFolder / "pascal.hdf5", 'w') as f:
 
-        for annotation_path in tqdm(glob.glob(f'{pascal_root}/Annotations/*.xml')):
+        for annotation_path in tqdm((pascal_root / "Annotations").glob('*.xml')):
             xml_root = xml.etree.ElementTree.parse(annotation_path).getroot()
             is_segmented = (xml_root.find('segmented').text != '0')
 
@@ -40,11 +42,11 @@ def load_occluders(outputFolder, pascal_root):
             image_filename = xml_root.find('filename').text
             segmentation_filename = image_filename.replace('jpg', 'png')
 
-            path = f'{pascal_root}/JPEGImages/{image_filename}'
-            seg_path = f'{pascal_root}/SegmentationObject/{segmentation_filename}'
+            path = pascal_root / "JPEGImages" / image_filename
+            seg_path = pascal_root / "SegmentationObject"/ segmentation_filename
 
-            im = cv2.imread(path)
-            labels = np.asarray(Image.open(seg_path))
+            im = cv2.imread(str(path))
+            labels = np.asarray(Image.open(str(seg_path)))
 
             for i_obj, (xmin, ymin, xmax, ymax) in boxes:
                 object_mask = (labels[ymin:ymax, xmin:xmax] == i_obj + 1).astype(np.uint8)

@@ -28,6 +28,9 @@ class BMLImgOpenSimDataSet(TorchDataset):
             self.usedSubjects = self.cfg.VALID_SUBJECTS
         elif datasetType == 2:
             self.usedSubjects = self.cfg.TEST_SUBJECTS
+          #HACK: added by Marian 
+        elif datasetType == 3:
+            self.usedSubjects = [11]      
         else:
             raise Exception("The type of the dataset are not defined")
         self.datasetType = datasetType

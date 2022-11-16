@@ -5,7 +5,7 @@ sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
 ## Dataset generation imports
 from ms_model_estimation.bbox.extract_frame import extract_frame_from_video,search
 from ms_model_estimation.bbox.BMLBBoxGenerator import BMLBBoxGenerator
-from ms_model_estimation.models.hdf5.bml import search_bml_data_list,create_h5py
+from ms_model_estimation.models.hdf5.bml import search_bml_data_list,create_h5py,create_opensim_label_dataset
 from ms_model_estimation.bbox.generate_index import generate_idx_file
 from ms_model_estimation.models.hdf5.pascal import load_occluders
 
@@ -83,4 +83,5 @@ if __name__ == "__main__":
 
     subject_ids = list(table['df'].subjectID.unique())
     for s_id in subject_ids:
-        create_h5py(outputFolder + f"Subject_{s_id}.hdf5", table["df"], table["bboxInf"])
+        create_opensim_label_dataset(outputFolder + f"subject_{s_id}_opensim.hdf5", table['df'], table['pyBaseModel'])
+        create_h5py(outputFolder + f"subject_{s_id}.hdf5", table["df"], table["bboxInf"])

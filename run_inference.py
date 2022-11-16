@@ -16,8 +16,8 @@ cwd = Path(__file__).parent
 
 cfg = get_cfg_defaults()
 
-cfg.STARTPOSMODELPATH = str((cwd / r'checkpoints\OS_ALL_L2_ANGLE006.pt').as_posix())
-cfg.STARTTEMPORALMODELPATH = str((cwd / r'checkpoints\OS_TEMPORAL_TRANSFORMER.pt').as_posix())
+cfg.STARTPOSMODELPATH = str((cwd / r'checkpoints\OS_ALL_L1_ANGLE006.pt').as_posix())
+cfg.STARTTEMPORALMODELPATH = str((cwd / r'checkpoints\model_best_OS_TEMPORAL_TRANSFORMER_L1.pt').as_posix())
 cfg.MODEL_FOLDER = str((cwd / r'checkpoints').as_posix())
 cfg.BML_FOLDER = str((cwd / r'_dataset_full').as_posix())
 

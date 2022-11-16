@@ -6,24 +6,31 @@
 1. Requirement
 
         Python 3.8.0 
-        PyTorch 1.10.0
-        OpenSim 4.3
-        Notepad++
+        PyTorch 1.11.0
+        OpenSim 4.3+        
 
 2. Python package
 
     Clone this repo and run the following:
 
-        conda create --name <env> --file requirements.txt
+        conda env create -f enivronment_setup.yml
+    
+    Activate the environment using
 
-3. OpenSim 4.3
-    1. [Download OpenSim](https://simtk.org/frs/?group_id=91)
-    2. [Set up Python environment](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python)
-        + In installation_folder/OpenSim 4.3/sdk/Python, run
+        conda activate d3ke
         
-                python -m pip install
-            
-    Note: Scripts requiring to import OpenSim are only verified on Windows.  
+3. OpenSim 4.3
+    1. [Download and Install OpenSim](https://simtk.org/frs/?group_id=91)    
+    
+    2. (On Windows)[Install python API](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python)
+        + In ``installation_folder/OpenSim 4.x/sdk/Python``, run
+
+                python setup_win_python38.py
+        
+                python -m pip install .
+    3. (On other operating systems) Follow the instructions to setup the opensim scripting environment [here](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python) 
+
+    **Note**: Scripts requiring to import OpenSim are only verified on Windows.  
 
 ## Dataset and SMPL+H models
 1. [BMLmovi](https://www.biomotionlab.ca/movi/)

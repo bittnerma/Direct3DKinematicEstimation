@@ -74,7 +74,13 @@ After the ground truth has been generated, the dataset needs to be prepared.
 
 Run the [prepare_dataset](prepare_dataset.py) script and provide the location where the BMLMovi videos are stored:
 ```bash
-python prepare_dataset.py path/to/bmlmovi/videos
+python prepare_dataset.py --BMLMoviDir path/to/bmlmovi/videos
+ ```
+
+NOTE: for generating data for training you should also provide the path to the Pascal VOC dataset
+
+```bash
+python prepare_dataset.py --BMLMoviDir path/to/bmlmovi/videos --PascalDir path/to/pascal_voc/data
  ```
 
 This process might again take several hours!

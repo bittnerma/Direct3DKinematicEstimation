@@ -1,0 +1,135 @@
+from ms_model_estimation.training.utils.BMLUtils import PredictedMarkers, smplHJoint
+from ms_model_estimation.training.utils.BMLUtils import TrainingSubjects, ValidationSubjects, TestSubjects, Joints_Inside_Cylinder_Body, \
+    PairMarkers, SymmetricPairMarkers
+from yacs.config import CfgNode as CN
+
+_C = CN()
+
+# Random seed
+_C.SEED = 100
+_C.WORKERS = 1
+_C.EVAL_WORKERS = 1
+_C.VALID_WORKERS = 1
+
+# Test mode
+_C.TESTMODE = False
+_C.PROGRESSBAR = True
+
+# Postfix for the model name
+_C.POSTFIX = "BML_TEMPORAL"
+
+# subjects ID
+_C.TRAINING_SUBJECTS = TrainingSubjects
+_C.VALID_SUBJECTS = ValidationSubjects
+_C.TEST_SUBJECTS = TestSubjects
+
+# Prediction 
+_C.PREDICTION = CN()
+_C.PREDICTION.POS_NAME = smplHJoint + PredictedMarkers
+# The number of prediction
+_C.PREDICTION.NUM_JOINTS = len(smplHJoint)
+_C.PREDICTION.NUM_MARKER = len(PredictedMarkers)
+_C.PREDICTION.NUMPRED = _C.PREDICTION.NUM_JOINTS + _C.PREDICTION.NUM_MARKER
+
+# Model Architecture
+_C.MODEL = CN()
+_C.MODEL.TYPE = 0
+_C.MODEL.INFEATURES = _C.PREDICTION.NUMPRED*3
+_C.MODEL.OUTFEATURES = _C.PREDICTION.NUMPRED*3
+_C.MODEL.CAUSAL = False
+_C.MODEL.REFINE = False
+_C.MODEL.USE_2D = False
+_C.MODEL.USE_GT = False
+_C.MODEL.AWARED_OCCLUSION = CN()
+_C.MODEL.AWARED_OCCLUSION.GT = False
+_C.MODEL.AWARED_OCCLUSION.USE = False
+_C.MODEL.AWARED_OCCLUSION.USE_PREDICTION = False
+_C.MODEL.RECEPTIVE_FIELD = 243
+
+# Training settting 
+_C.TRAINING = CN()
+_C.TRAINING.BATCHSIZE = 128
+_C.TRAINING.EVALUATION_BATCHSIZE = 128
+_C.TRAINING.TRAINING_STEPS = 1
+_C.TRAINING.EPOCH = [120]
+_C.TRAINING.START_LR = [0.001]
+_C.TRAINING.END_LR = [0.0000182]
+_C.TRAINING.INITIAL_MOMENTUM = 0.1
+_C.TRAINING.END_MOMENTUM = 0.001
+_C.TRAINING.AMSGRAD = True
+
+# data augmentation
+_C.DATASET = CN()
+# user every i-th frame for training and evaluation
+_C.DATASET.TRAINING_USEDEACHFRAME = 1
+_C.DATASET.USEDEACHFRAME = 1
+
+_C.DATASET.OCCLUSION = CN()
+_C.DATASET.OCCLUSION.PROB = 0.0
+_C.DATASET.OCCLUSION.ZERO = True
+
+_C.DATASET.SCALING_PROB = 0.0
+_C.DATASET.ROATION_PROB = 0.0
+_C.DATASET.MIX_PROB = 0.0
+
+_C.DATASET.GEOM = CN()
+_C.DATASET.GEOM.AUG = False
+_C.DATASET.GEOM.ROT = 10
+_C.DATASET.GEOM.HFLIP = True
+
+# Paths and data folder
+_C.PASCAL_PATH = None
+_C.BML_FOLDER = None
+_C.MODEL_FOLDER = None
+_C.STARTMODELPATH = None
+
+# hyper paramters
+_C.HYP = CN()
+_C.HYP.POS = 1
+_C.HYP.MARKER = 1
+_C.HYP.SYMARKERPAIRS = 1
+_C.HYP.MARKERPAIRS = 1
+_C.HYP.SEQUENCE_LEN_LOSS = 1
+_C.HYP.SEQUENCE_POS_LOSS = 1
+
+# transformer architecture
+_C.TRANSFORMER = CN()
+_C.TRANSFORMER.D_MODEL = 256
+_C.TRANSFORMER.D_CHANNEL = 512
+_C.TRANSFORMER.N_HEADS = 8
+_C.TRANSFORMER.STRIDES = [3, 9, 9]
+_C.TRANSFORMER.BATCHNORM = False
+_C.TRANSFORMER.DROPOUT = False
+_C.TRANSFORMER.N1 = 3
+_C.TRANSFORMER.POS_ENCODNIG_EVERY_BLOCK = False
+
+# LSTM
+_C.LSTM = CN()
+_C.LSTM.HIDDEN_STATE = 512
+_C.LSTM.NUM_LAYERS = 3
+_C.LSTM.DROPOUTPROB = 0.1
+_C.LSTM.BIDIRECTIONAL = True
+
+# LOSS
+_C.LOSS = CN()
+_C.LOSS.POS_LOSS_TYPE = 2
+_C.LOSS.SEQUENCE_LEN_LOSS = CN()
+_C.LOSS.SEQUENCE_LEN_LOSS.USE = False
+_C.LOSS.SEQUENCE_LEN_LOSS.TYPE = 2
+_C.LOSS.SEQUENCE_POS_LOSS = CN()
+_C.LOSS.SEQUENCE_POS_LOSS.USE = False
+_C.LOSS.SEQUENCE_POS_LOSS.TYPE = 2
+_C.LOSS.SEQUENCE_POS_LOSS.LAMBDA = 16
+
+
+def get_cfg_defaults():
+    return _C.clone()
+
+
+def update_config(config):
+    assert config.BML_FOLDER is not None
+    assert config.MODEL_FOLDER is not None
+    # assert  config.PRETRAINED_POSE_MODEL is not None
+    # assert len(config.TRAINING.USE_POSE_ESTIMATION) ==  config.TRAINING.TRAINING_STEPS
+
+    return config

@@ -2,10 +2,10 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
 ## GT Generation imports
-from ms_model_estimation.opensim.OpenSimModel import OpenSimModel
+from ms_model_estimation.opensim_utils.OpenSimModel import OpenSimModel
 from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
-from ms_model_estimation.opensim.DataReader import DataReader
-from ms_model_estimation.opensim.OSLabelGenerator import BMLAmassOpenSimGTGenerator
+from ms_model_estimation.opensim_utils.OpenSimDataReader import DataReader
+from ms_model_estimation.opensim_utils.OSLabelGenerator import BMLAmassOpenSimGTGenerator
 from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 
 import pickle as pkl

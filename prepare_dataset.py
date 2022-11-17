@@ -3,11 +3,11 @@ import sys
 sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
 
 ## Dataset generation imports
-from ms_model_estimation.bbox.extract_frame import extract_frame_from_video,search
-from ms_model_estimation.bbox.BMLBBoxGenerator import BMLBBoxGenerator
-from ms_model_estimation.models.hdf5.bml import search_bml_data_list,create_h5py,create_opensim_label_dataset
-from ms_model_estimation.bbox.generate_index import generate_idx_file
-from ms_model_estimation.models.hdf5.pascal import load_occluders
+from ms_model_estimation.data_preparation.extract_frame import extract_frame_from_video,search
+from ms_model_estimation.data_preparation.BMLBBoxGenerator import BMLBBoxGenerator
+from ms_model_estimation.training.hdf5.bml import search_bml_data_list,create_h5py,create_opensim_label_dataset
+from ms_model_estimation.data_preparation.generate_index import generate_idx_file
+from ms_model_estimation.training.hdf5.pascal import load_occluders
 
 import pickle as pkl
 from tqdm import tqdm

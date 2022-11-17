@@ -1,6 +1,6 @@
 from ms_model_estimation.models.config.config_bml import get_cfg_defaults
-from ms_model_estimation.models.OSUtils import PredictedOSJoints , LeafJoints
-from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint
+from ms_model_estimation.models.utils.OSUtils import PredictedOSJoints , LeafJoints
+from ms_model_estimation.models.utils.BMLUtils import PredictedMarkers, smplHJoint
 from yacs.config import CfgNode as CN
 
 _C = get_cfg_defaults()

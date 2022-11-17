@@ -1,6 +1,6 @@
 import collections
 import torch
-from ms_model_estimation.models.openSim.OpenSimBaseTree import OpenSimBaseTree
+from ms_model_estimation.models.networks.model_layer.OpenSimBaseTree import OpenSimBaseTree
 
 
 class OpenSimTreeLayer(OpenSimBaseTree):

@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 
 import sys
 sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
-from ms_model_estimation.models.utils_os_spatialTemporal_infer import Training
+from ms_model_estimation.models.train_os_spatialTemporal_infer import Training
 from ms_model_estimation.models.config.config_os_spatialtemporal_time import get_cfg_defaults
 
 cwd = Path(__file__).parent

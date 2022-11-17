@@ -4,7 +4,7 @@ import torch
 import numpy as np
 from ms_model_estimation.models.dataset.TorchDataset import TorchDataset
 from ms_model_estimation.models.dataset.data_loading import load_and_transform3d
-from ms_model_estimation.models.OSUtils import MIRROR_JOINTS
+from ms_model_estimation.models.utils.OSUtils import MIRROR_JOINTS
 
 
 class BMLImgDataSet(TorchDataset):

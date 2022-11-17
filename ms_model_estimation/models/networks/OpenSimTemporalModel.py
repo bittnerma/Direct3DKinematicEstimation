@@ -1,9 +1,9 @@
 import math
 import torch
 import torch.nn as nn
-from ms_model_estimation.models.TemporalModel import TemporalPoseEstimationModel
-from ms_model_estimation.models.openSim.OpenSimTemporalTransitLayer import OpenSimTransitionLayer
-from ms_model_estimation.models.openSim.OpenSimTreeLayer import OpenSimTreeLayer
+from ms_model_estimation.models.networks.TemporalModel import TemporalPoseEstimationModel
+from ms_model_estimation.models.networks.model_layer.OpenSimTemporalTransitLayer import OpenSimTransitionLayer
+from ms_model_estimation.models.networks.model_layer.OpenSimTreeLayer import OpenSimTreeLayer
 
 
 class OpenSimTemporalModel(nn.Module):

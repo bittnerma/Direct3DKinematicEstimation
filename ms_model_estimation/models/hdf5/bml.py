@@ -5,13 +5,13 @@ import torch
 import pickle
 import pandas as pd
 from ms_model_estimation.opensim.DataReader import DataReader
-from ms_model_estimation.models.openSim.OpenSimNode import OpenSimNode
-from ms_model_estimation.models.openSim.OpenSimTreeLayer import OpenSimTreeLayer
+from ms_model_estimation.models.networks.model_layer.OpenSimNode import OpenSimNode
+from ms_model_estimation.models.networks.model_layer.OpenSimTreeLayer import OpenSimTreeLayer
 from ms_model_estimation.models.camera.cameralib import *
 from tqdm import trange
-from ms_model_estimation.models.OSUtils import LeafJoints, PredictedBones, PredictedCoordinates, \
+from ms_model_estimation.models.utils.OSUtils import LeafJoints, PredictedBones, PredictedCoordinates, \
     PredictedOSJoints
-from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint
+from ms_model_estimation.models.utils.BMLUtils import PredictedMarkers, smplHJoint
 from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 
 

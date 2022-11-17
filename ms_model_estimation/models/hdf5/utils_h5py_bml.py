@@ -7,9 +7,9 @@ import torch
 import pickle
 import numpy as np
 import pandas as pd
-from ms_model_estimation.models.openSim.OpenSimNode import OpenSimNode
-from ms_model_estimation.models.openSim.OpenSimTreeLayer import OpenSimTreeLayer
-from ms_model_estimation.models.OSUtils import PredictedBones, PredictedCoordinates, PredictedJointPosition, PredictedMarkers
+from ms_model_estimation.models.networks.model_layer.OpenSimNode import OpenSimNode
+from ms_model_estimation.models.networks.model_layer.OpenSimTreeLayer import OpenSimTreeLayer
+from ms_model_estimation.models.utils.OSUtils import PredictedBones, PredictedCoordinates, PredictedJointPosition, PredictedMarkers
 from opensim.DataReader import DataReader
 from opensim import OpenSimModel
 from ms_model_estimation.smplh.smplh_vertex_index import smplHJoint

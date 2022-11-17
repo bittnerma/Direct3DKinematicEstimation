@@ -1,5 +1,5 @@
-from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint
-from ms_model_estimation.models.BMLUtils import TrainingSubjects, ValidationSubjects, TestSubjects, Joints_Inside_Cylinder_Body, \
+from ms_model_estimation.models.utils.BMLUtils import PredictedMarkers, smplHJoint
+from ms_model_estimation.models.utils.BMLUtils import TrainingSubjects, ValidationSubjects, TestSubjects, Joints_Inside_Cylinder_Body, \
     PairMarkers, SymmetricPairMarkers
 from yacs.config import CfgNode as CN
 from ms_model_estimation.models.config.config_bml import get_cfg_defaults

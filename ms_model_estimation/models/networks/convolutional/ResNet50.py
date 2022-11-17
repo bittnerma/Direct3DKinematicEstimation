@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torchvision
-from ms_model_estimation.models.spatial.ResNet_CenterStriding import resnet50 as resnet50_center_striding
-from ms_model_estimation.models.spatial.ResNet_CenterStriding import resnext50_32x4d as resnext50_32x4d_center_striding
+from ms_model_estimation.models.networks.convolutional.ResNet_CenterStriding import resnet50 as resnet50_center_striding
+from ms_model_estimation.models.networks.convolutional.ResNet_CenterStriding import resnext50_32x4d as resnext50_32x4d_center_striding
 
 class Normalize(nn.Module):
     def __init__(self):

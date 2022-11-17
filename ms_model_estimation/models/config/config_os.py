@@ -1,5 +1,5 @@
 from ms_model_estimation.models.config.config_bml import get_cfg_defaults as get_img_defaults
-from ms_model_estimation.models.OSUtils import PredictedBones, PredictedOSJoints, PredictedCoordinates, LeafJoints, \
+from ms_model_estimation.models.utils.OSUtils import PredictedBones, PredictedOSJoints, PredictedCoordinates, LeafJoints, \
     MIRROR_BONES, PredictedMarkersType, PredictedMarkers, Joints_Inside_Cylinder_Body
 from yacs.config import CfgNode as CN
 

@@ -1,6 +1,6 @@
 import torch.nn as nn
-from ms_model_estimation.models.spatial.ResNet50 import ResNet50
-from ms_model_estimation.models.spatial.MetricScaleLayer import MetricScaleLayer
+from ms_model_estimation.models.networks.convolutional.ResNet50 import ResNet50
+from ms_model_estimation.models.networks.convolutional.MetricScaleLayer import MetricScaleLayer
 import torch
 
 

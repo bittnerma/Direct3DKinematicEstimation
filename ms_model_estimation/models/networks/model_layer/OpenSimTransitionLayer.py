@@ -1,8 +1,8 @@
 from ms_model_estimation.models.representation6D.Representation6D import Representation6D
 import torch.nn as nn
 import torch
-from ms_model_estimation.models.openSim.OpenSimNode import OpenSimNode
-from ms_model_estimation.models.openSim.OpenSimScaleLayer import OpenSimScaleLayer
+from ms_model_estimation.models.networks.model_layer.OpenSimNode import OpenSimNode
+from ms_model_estimation.models.networks.model_layer.OpenSimScaleLayer import OpenSimScaleLayer
 
 
 class OpenSimTransitionLayer(nn.Module):

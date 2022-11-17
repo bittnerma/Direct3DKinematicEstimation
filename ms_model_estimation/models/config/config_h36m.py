@@ -1,5 +1,5 @@
 from ms_model_estimation.models.config.config_default_img_training import get_cfg_defaults as get_img_defaults
-from ms_model_estimation.models.MPIIUtils import create_table, ARMS_PELVIS_LEGS
+from ms_model_estimation.models.utils.MPIIUtils import create_table, ARMS_PELVIS_LEGS
 from yacs.config import CfgNode as CN
 import h5py
 

@@ -1,7 +1,7 @@
 from yacs.config import CfgNode as CN
 from ms_model_estimation.models.config.config_bml import get_cfg_defaults as get_bml_defaults
-from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint
-from ms_model_estimation.models.OSUtils import  PredictedCoordinates
+from ms_model_estimation.models.utils.BMLUtils import PredictedMarkers, smplHJoint
+from ms_model_estimation.models.utils.OSUtils import  PredictedCoordinates
 
 _C = get_bml_defaults()
 

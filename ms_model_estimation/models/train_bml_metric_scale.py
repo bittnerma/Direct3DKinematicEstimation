@@ -5,12 +5,12 @@ import numpy as np
 import torch
 from ms_model_estimation.models.dataset.BMLImgDataSet import BMLImgDataSet
 from ms_model_estimation.models.loss.CustomLoss import CustomLoss
-from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
+from ms_model_estimation.models.networks.PoseEstimationModel import PoseEstimationModel
 from ms_model_estimation.models.config.config_bml import get_cfg_defaults
 from torch.utils.data import DataLoader
 import os
 from pathlib import Path
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 from tqdm import tqdm
 import time

@@ -5,12 +5,12 @@ import numpy as np
 import torch
 from ms_model_estimation.models.dataset.BMLImgSpatialTemporalDataSet import BMLImgDataSet
 from ms_model_estimation.models.loss.CustomLoss import CustomLoss
-from ms_model_estimation.models.SpatialTemporalModel import SpatialTemporalModel
+from ms_model_estimation.models.networks.SpatialTemporalModel import SpatialTemporalModel
 from ms_model_estimation.models.config.config_bml_spatialtemporal import get_cfg_defaults
 from torch.utils.data import DataLoader
 import os
 from pathlib import Path
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 from tqdm import tqdm
 import time

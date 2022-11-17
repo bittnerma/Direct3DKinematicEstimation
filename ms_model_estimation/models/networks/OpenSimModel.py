@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
-from ms_model_estimation.models.spatial.ResNet50 import ResNet50
-from ms_model_estimation.models.openSim.OpenSimTreeLayer import OpenSimTreeLayer
-from ms_model_estimation.models.openSim.OpenSimTransitionLayer import OpenSimTransitionLayer
-from ms_model_estimation.models.spatial.MetricScaleLayer import MetricScaleLayer
+from ms_model_estimation.models.networks.convolutional.ResNet50 import ResNet50
+from ms_model_estimation.models.networks.model_layer.OpenSimTreeLayer import OpenSimTreeLayer
+from ms_model_estimation.models.networks.model_layer.OpenSimTransitionLayer import OpenSimTransitionLayer
+from ms_model_estimation.models.networks.convolutional.MetricScaleLayer import MetricScaleLayer
 
 
 class OpenSimModel(nn.Module):

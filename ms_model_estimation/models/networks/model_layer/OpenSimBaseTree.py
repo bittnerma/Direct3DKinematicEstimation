@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import collections
 import numpy as np
-from ms_model_estimation.models.openSim.OpenSimNode import OpenSimNode
+from ms_model_estimation.models.networks.model_layer.OpenSimNode import OpenSimNode
 
 
 class OpenSimBaseTree(nn.Module):

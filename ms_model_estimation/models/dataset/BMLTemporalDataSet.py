@@ -5,7 +5,7 @@ import torch
 import numpy as np
 from ms_model_estimation.models.dataset.TorchDataset import TorchDataset
 from transforms3d.euler import euler2mat
-from ms_model_estimation.models.BMLUtils import MIRROR_JOINTS
+from ms_model_estimation.models.utils.BMLUtils import MIRROR_JOINTS
 
 
 class BMLImgDataSet(TorchDataset):

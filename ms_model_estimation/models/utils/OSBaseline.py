@@ -10,12 +10,12 @@ from opensim.DataReader import DataReader
 import pandas as pd
 from tqdm import tqdm
 from ms_model_estimation.models.dataset.BMLImgTposeDataSet import BMLImgTposeDataSet
-from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
+from ms_model_estimation.models.networks.PoseEstimationModel import PoseEstimationModel
 from ms_model_estimation.models.config.config_os_baseline import get_cfg_defaults
 from torch.utils.data import DataLoader
 import os
 from pathlib import Path
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 from ms_model_estimation.smplh.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
 

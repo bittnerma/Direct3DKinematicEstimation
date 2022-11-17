@@ -1,9 +1,9 @@
 import math
 import torch.nn as nn
-from ms_model_estimation.models.temporal.TCN_FEATURES import TemporalModel, TemporalModelOptimized1f
-from ms_model_estimation.models.temporal.Transformer import StridedTransformerEncoder, VanillaTransformerEncoder, \
+from ms_model_estimation.models.networks.sequential.TCN_FEATURES import TemporalModel, TemporalModelOptimized1f
+from ms_model_estimation.models.networks.sequential.Transformer import StridedTransformerEncoder, VanillaTransformerEncoder, \
     TransformerEncoder
-from ms_model_estimation.models.temporal.LSTM import LSTM
+from ms_model_estimation.models.networks.sequential.LSTM import LSTM
 
 class TemporalPoseEstimationModel(nn.Module):
 

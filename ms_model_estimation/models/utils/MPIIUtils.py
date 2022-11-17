@@ -1,4 +1,4 @@
-from ms_model_estimation.models.H36MUtils import SELECTED_JOINTS as H36M_SELECTED_JOINTS
+from ms_model_estimation.models.utils.H36MUtils import SELECTED_JOINTS as H36M_SELECTED_JOINTS
 
 JOINTS = {
     0: 'RANK',

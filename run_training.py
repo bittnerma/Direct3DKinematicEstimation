@@ -9,10 +9,10 @@ from torch.utils.data import DataLoader
 
 import sys
 sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
-from ms_model_estimation.models.utils_opensim import Training
+from ms_model_estimation.models.train_opensim import Training
 from ms_model_estimation.models.config.config_os import get_cfg_defaults
 
-from ms_model_estimation.models.utils_opensim_temporal4 import Training as TemporalTraining
+from ms_model_estimation.models.train_opensim_temporal4 import Training as TemporalTraining
 from ms_model_estimation.models.config.config_os_temporal import get_cfg_defaults as get_temporal_cfg_defaults
 
 cwd = Path(__file__).parent

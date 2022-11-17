@@ -4,7 +4,7 @@ import sys
 sys.path.append("/home/WTYANG/thesis/ms_model_estimation")
 import torch
 from ms_model_estimation.models.dataset import TorchDataset
-from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
+from ms_model_estimation.models.networks.PoseEstimationModel import PoseEstimationModel
 from ms_model_estimation.models.loss.CustomLoss import CustomLoss
 from ms_model_estimation import PredictedMarkers
 from ms_model_estimation.smplh.smplh_vertex_index import smplHJoint

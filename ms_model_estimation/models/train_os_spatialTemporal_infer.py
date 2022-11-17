@@ -5,11 +5,11 @@ import random
 import numpy as np
 import torch
 from ms_model_estimation.models.dataset.BMLImgVideoDataSet import BMLImgDataSet
-from ms_model_estimation.models.openSim.OpenSimModel import OpenSimModel
-from ms_model_estimation.models.OpenSimTemporalModel import OpenSimTemporalModel
+from ms_model_estimation.models.networks.OpenSimModel import OpenSimModel
+from ms_model_estimation.models.networks.OpenSimTemporalModel import OpenSimTemporalModel
 from ms_model_estimation.models.config.config_os_spatialtemporal_time import get_cfg_defaults
 from torch.utils.data import DataLoader
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 from tqdm import tqdm, trange
 import time

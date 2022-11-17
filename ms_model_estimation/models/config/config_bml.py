@@ -1,5 +1,5 @@
 from ms_model_estimation.models.config.config_default_img_training import get_cfg_defaults as get_img_defaults
-from ms_model_estimation.models.BMLUtils import TrainingSubjects, ValidationSubjects, TestSubjects, Joints_Inside_Cylinder_Body, \
+from ms_model_estimation.models.utils.BMLUtils import TrainingSubjects, ValidationSubjects, TestSubjects, Joints_Inside_Cylinder_Body, \
     PairMarkers, SymmetricPairMarkers, PredictedMarkers, smplHJoint
 from yacs.config import CfgNode as CN
 

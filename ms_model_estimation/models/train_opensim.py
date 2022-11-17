@@ -8,10 +8,10 @@ import torch
 from ms_model_estimation.models.dataset.BMLImgOpenSimDataSet import BMLImgOpenSimDataSet
 from ms_model_estimation.models.dataset.BMLImgTposeDataSet import BMLImgTposeDataSet
 from ms_model_estimation.models.loss.CustomLoss import CustomLoss
-from ms_model_estimation.models.openSim.OpenSimModel import OpenSimModel
+from ms_model_estimation.models.networks.OpenSimModel import OpenSimModel
 from ms_model_estimation.models.config.config_os import get_cfg_defaults, update_config
 from torch.utils.data import DataLoader
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 from tqdm import tqdm
 from ms_model_estimation.models.TorchTrainingProgram import TorchTrainingProgram

@@ -1,4 +1,4 @@
-from ms_model_estimation.models.BMLUtils import PredictedMarkers, smplHJoint, Joints_Inside_Cylinder_Body
+from ms_model_estimation.models.utils.BMLUtils import PredictedMarkers, smplHJoint, Joints_Inside_Cylinder_Body
 import numpy as np
 from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet
 

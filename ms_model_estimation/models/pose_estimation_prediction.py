@@ -5,9 +5,9 @@ import numpy as np
 from tqdm import tqdm
 import torch
 from ms_model_estimation.models.dataset.BMLImgDataSet import BMLImgDataSet
-from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
+from ms_model_estimation.models.networks.PoseEstimationModel import PoseEstimationModel
 from torch.utils.data import DataLoader
-from ms_model_estimation.models.BMLUtils import CAMERA_TABLE
+from ms_model_estimation.models.utils.BMLUtils import CAMERA_TABLE
 from ms_model_estimation.models.camera.cameralib import Camera
 
 

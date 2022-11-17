@@ -1,5 +1,5 @@
 from ms_model_estimation.models.config.config_default_img_training import get_cfg_defaults as get_img_defaults
-from ms_model_estimation.models.MPIIUtils import MAPPING_H36M_INDEX_TO_MPII
+from ms_model_estimation.models.utils.MPIIUtils import MAPPING_H36M_INDEX_TO_MPII
 
 _C = get_img_defaults()
 

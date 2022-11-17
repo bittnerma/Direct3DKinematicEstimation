@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from ms_model_estimation.models.dataset.BMLTemporalDataSet import BMLImgDataSet
 from ms_model_estimation.models.loss.CustomLoss import CustomLoss
-from ms_model_estimation.models.TemporalModel import TemporalPoseEstimationModel
+from ms_model_estimation.models.networks.TemporalModel import TemporalPoseEstimationModel
 from ms_model_estimation.models.config.config_bml_temporal import get_cfg_defaults, update_config
 from ms_model_estimation.models.TorchTrainingProgram import TorchTrainingProgram
 from torch.utils.data import DataLoader

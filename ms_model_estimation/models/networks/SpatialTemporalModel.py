@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
-from ms_model_estimation.models.PoseEstimationModel import PoseEstimationModel
-from ms_model_estimation.models.TemporalModel import TemporalPoseEstimationModel
+from ms_model_estimation.models.networks.PoseEstimationModel import PoseEstimationModel
+from ms_model_estimation.models.networks.TemporalModel import TemporalPoseEstimationModel
 
 
 class SpatialTemporalModel(nn.Module):

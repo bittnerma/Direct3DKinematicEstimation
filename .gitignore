@@ -222,3 +222,4 @@ checkpoints/*
 
 test_*.py
 _tmp
+notes.txt

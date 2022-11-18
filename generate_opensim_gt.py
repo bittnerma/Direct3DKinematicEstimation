@@ -4,7 +4,7 @@ sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
 ## GT Generation imports
 from ms_model_estimation.opensim_utils.OpenSimModel import OpenSimModel
 from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
-from ms_model_estimation.opensim_utils.OpenSimDataReader import DataReader
+from ms_model_estimation.opensim_utils.OpenSimDataReader import OpenSimDataReader
 from ms_model_estimation.opensim_utils.OSLabelGenerator import BMLAmassOpenSimGTGenerator
 from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 
@@ -27,7 +27,7 @@ opensimGTFolder = str((parent_dir / "resources/opensim/BMLmovi/BMLmovi").as_posi
 
 ## GT Generation
 if __name__ == "__main__":
-    dataReader=DataReader()
+    dataReader=OpenSimDataReader()
     ikset=dataReader.read_ik_set(IKTaskSet)
     scalingIKSet=dataReader.read_ik_set(scalingIKSet)
     scaleset=dataReader.read_scale_set(scaleSet)

@@ -198,7 +198,7 @@ cython_debug/
 resources/opensim/BMLmovi/BMLmovi/*
 
 
-ms_model_estimation/resources/
+# ms_model_estimation/resources/
 
 
 resources/opensim/BMLmovi/temp_scale_setUp_*.xml

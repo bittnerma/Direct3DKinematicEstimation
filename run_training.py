@@ -63,7 +63,4 @@ if __name__ == "__main__":
     trainingProgram = TemporalTraining(args, cfg)
     trainingProgram.run()
     trainingProgram.store_every_frame_prediction(train=True, valid=True, test=True)
-
-
     
-

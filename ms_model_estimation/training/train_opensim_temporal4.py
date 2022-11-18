@@ -443,7 +443,7 @@ class Training(TorchTrainingProgram):
         self.model.eval()
 
         if valid:
-            dataset = BMLOpenSimTemporalDataSet(cfg, self.h5pyFolder,
+            dataset = BMLOpenSimTemporalDataSet(self.cfg, self.h5pyFolder,
                                                 self.h5pyFolder + "os_valid.npy", 1, evaluation=True)
             datasetLoader = DataLoader(dataset, batch_size=self.cfg.TRAINING.EVALUATION_BATCHSIZE, shuffle=False,
                                        drop_last=False,
@@ -452,7 +452,7 @@ class Training(TorchTrainingProgram):
             self.save_prediction(dataset, datasetLoader, 'valid')
 
         if test:
-            dataset = BMLOpenSimTemporalDataSet(cfg, self.h5pyFolder, self.h5pyFolder + "os_test.npy",
+            dataset = BMLOpenSimTemporalDataSet(self.cfg, self.h5pyFolder, self.h5pyFolder + "os_test.npy",
                                                 2, evaluation=True)
             datasetLoader = DataLoader(dataset, batch_size=self.cfg.TRAINING.EVALUATION_BATCHSIZE, shuffle=False,
                                        drop_last=False,
@@ -461,7 +461,7 @@ class Training(TorchTrainingProgram):
             self.save_prediction(dataset, datasetLoader, 'test')
 
         if train:
-            dataset = BMLOpenSimTemporalDataSet(cfg, self.h5pyFolder,
+            dataset = BMLOpenSimTemporalDataSet(self.cfg, self.h5pyFolder,
                                                 self.h5pyFolder + "os_train.npy", 0,
                                                 evaluation=False)
             datasetLoader = DataLoader(dataset, batch_size=self.cfg.TRAINING.EVALUATION_BATCHSIZE, shuffle=False,

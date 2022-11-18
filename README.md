@@ -29,7 +29,9 @@
         
                 python -m pip install .
     3. (On other operating systems) Follow the instructions to setup the opensim scripting environment [here](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python) 
-
+    
+    4. Copy all *.obj files from resources/opensim/geometry to <installation_folder>/OpenSim 4.x/Geometry
+    
     **Note**: Scripts requiring to import OpenSim are only verified on Windows.  
 
 ## Dataset and SMPL+H models

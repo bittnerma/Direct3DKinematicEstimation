@@ -15,7 +15,7 @@ parent_dir = Path(__file__).absolute().parent
 
 
 # modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body.osim").as_posix())
-modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body_wo_hands.osim").as_posix())
+modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body.osim").as_posix())
 amassFolder=str((parent_dir / "resources/amass/").as_posix())
 v3dFolder = str((parent_dir / "resources/V3D/F/").as_posix())
 

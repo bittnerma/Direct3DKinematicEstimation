@@ -8,11 +8,11 @@ import torch
 from torch.utils.data import DataLoader
 
 import sys
-sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
+sys.path.append(str(Path(__file__).absolute().parent / "ms_model_estimation"))
 from ms_model_estimation.training.train_os_spatialTemporal_infer import Training
 from ms_model_estimation.training.config.config_os_spatialtemporal_time import get_cfg_defaults
 
-cwd = Path(__file__).parent
+cwd = Path(__file__).absolute().parent
 
 cfg = get_cfg_defaults()
 

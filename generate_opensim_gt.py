@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys
-sys.path.append(str(Path(__file__).parent / "ms_model_estimation"))
+sys.path.append(str(Path(__file__).absolute().parent / "ms_model_estimation"))
 ## GT Generation imports
 from ms_model_estimation.opensim_utils.OpenSimModel import OpenSimModel
 from ms_model_estimation.smplh_util.constants.scalingIKInf import IKTaskSet, scalingIKSet, scaleSet
@@ -11,7 +11,7 @@ from ms_model_estimation.pyOpenSim.TrcGenerator import TrcGenerator
 import pickle as pkl
 from tqdm import tqdm
 
-parent_dir = Path(__file__).parent
+parent_dir = Path(__file__).absolute().parent
 
 
 # modelPath=str((parent_dir / "resources/opensim/BMLmovi/full_body.osim").as_posix())

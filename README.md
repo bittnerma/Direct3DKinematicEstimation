@@ -13,7 +13,7 @@
 
     Clone this repo and run the following:
 
-        conda env create -f enivronment_setup.yml
+        conda env create -f environment_setup.yml
     
     Activate the environment using
 

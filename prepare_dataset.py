@@ -83,5 +83,5 @@ if __name__ == "__main__":
 
     subject_ids = list(table['df'].subjectID.unique())
     for s_id in subject_ids:
-        create_opensim_label_dataset(outputFolder + f"subject_{s_id}_opensim.hdf5", table['df'], table['pyBaseModel'])
-        create_h5py(outputFolder + f"subject_{s_id}.hdf5", table["df"], table["bboxInf"])
+        create_opensim_label_dataset(outputFolder + f"/subject_{s_id}_opensim.hdf5", table['df'], table['pyBaseModel'])
+        create_h5py(outputFolder + f"/subject_{s_id}.hdf5", table["df"], table["bboxInf"])

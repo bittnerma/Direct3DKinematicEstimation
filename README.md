@@ -92,7 +92,7 @@ To train a model run the following command and provide the path to the  BMLMovi 
 python prepare_dataset.py --BMLMoviDir path/to/bmlmovi/videos --PascalDir path/to/pascal_voc/data
  ```
 
-This process might again take several hours!
+This process might again take several hours! Enabling the GPU may speed up the process by a factor ~10+.
 
 ## Evaluation
 

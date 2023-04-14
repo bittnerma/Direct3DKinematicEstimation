@@ -18,8 +18,14 @@
     Activate the environment using
 
         conda activate d3ke
+
+   If you want to run on a GPU you need to execute the following(NOTE: a NVIDIA desktop GPU is required):
+    
+         pip uninstall torch
+         conda install cuda -c nvidia
+         pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
         
-3. OpenSim 4.3
+4. OpenSim 4.3
     1. [Download and Install OpenSim](https://simtk.org/frs/?group_id=91)    
     
     2. (On Windows)[Install python API](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python)

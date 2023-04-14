@@ -37,6 +37,8 @@
     3. (On other operating systems) Follow the instructions to setup the opensim scripting environment [here](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python) 
     
     4. Copy all *.obj files from resources/opensim/geometry to <installation_folder>/OpenSim 4.x/Geometry
+    5. Add OpenSim to your system PATH variable
+        + On Windows, add ``installation_folder/OpenSim 4.x/bin`` to your PATH variable
     
     **Note**: Scripts requiring to import OpenSim are only verified on Windows.  
 
@@ -78,14 +80,13 @@ Once the dataset is generated the scaled OpenSim model and motion files can be f
 
 ## Dataset Preparation 
 
-After the ground truth has been generated, the dataset needs to be prepared. 
-
-Run the [prepare_dataset](prepare_dataset.py) script and provide the location where the BMLMovi videos are stored:
+After the ground truth has been generated, the dataset needs to be prepared. \
+For inference run the [prepare_dataset](prepare_dataset.py) script and provide the location where the BMLMovi videos are stored:
 ```bash
 python prepare_dataset.py --BMLMoviDir path/to/bmlmovi/videos
  ```
 
-NOTE: for generating data for training you should also provide the path to the Pascal VOC dataset
+To train a model run the following command and provide the path to the  BMLMovi dir and Pascal VOC dataset:
 
 ```bash
 python prepare_dataset.py --BMLMoviDir path/to/bmlmovi/videos --PascalDir path/to/pascal_voc/data

@@ -42,6 +42,15 @@
                 python setup_win_python38.py
         
                 python -m pip install .
+        You might experience issues when importing the OpenSim library, namely the error
+        ```bash
+                ImportError: DLL load failed while importing _simbody: The specified module could not be found.
+        ```
+        A quick fix is to include the path `/path/to/OpenSim 4.x/bin` in your windows environment variables (either user or system is fine). If this doesn't work, copy these lines of code to the scripts you will run:
+        ```python
+                import os
+                os.add_dll_directory("/path/to/OpenSim 4.x/bin")
+        ```
     3. (On other operating systems) Follow the instructions to setup the opensim scripting environment [here](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python) 
     
     4. Copy all *.obj files from resources/opensim/geometry to <installation_folder>/OpenSim 4.x/Geometry

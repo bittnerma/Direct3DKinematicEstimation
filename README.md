@@ -91,7 +91,7 @@ Once the dataset is generated the scaled OpenSim model and motion files can be f
 
 ## Dataset Preparation 
 
-After the ground truth has been generated, the dataset needs to be prepared. 
+After the ground truth has been generated, the dataset needs to be prepared. Before you start, make sure you have created folders `_dataset` and `_dataset_full` in the root folder of the cloned repository.
 
 Run the [prepare_dataset](prepare_dataset.py) script and provide the location where the BMLMovi videos are stored:
 ```bash

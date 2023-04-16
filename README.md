@@ -43,7 +43,7 @@
         
                 python -m pip install .
         You might experience issues when importing the OpenSim library, namely the error
-        ```bash
+        ```
                 ImportError: DLL load failed while importing _simbody: The specified module could not be found.
         ```
         A quick fix is to include the path `/path/to/OpenSim 4.x/bin` in your windows environment variables (either user or system is fine). If this doesn't work, copy these lines of code to the scripts you will run:

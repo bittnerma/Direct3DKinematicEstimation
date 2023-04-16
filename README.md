@@ -21,13 +21,13 @@
 
 3. Activate GPU support
    If you have an Nvidia GPU you can enable GPU acceleration to process the data faster. Enable it by running these commands:
-        ```bash
-                pip uninstall torch
-                conda install cuda -c nvidia
-                pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-        ```
+   ```bash
+        pip uninstall torch
+        conda install cuda -c nvidia
+        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+   ```
    You can check if you have GPU enabled using
-   ```python=
+   ```python
         import torch
         COMP_DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print("compute device: ", COMP_DEVICE)

@@ -71,7 +71,8 @@ if __name__ == "__main__":
     generator = BMLBBoxGenerator(outputFolder)
     files = generator.generate()
     for f in tqdm(files):
-        generator.generate_bbox_from_video(f)
+        # generator.generate_bbox_from_video(f)
+        generator.generate_batched_bbox(f, 15)
     generator.collect_all_bbox()
 
     # Generate movement index file

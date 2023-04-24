@@ -49,6 +49,7 @@ class BMLBBoxGenerator(BBoxGenerator):
             numFrames = f["numFrames"][0]
             name = f["name"][0]
             bboxes = np.zeros((numFrames, 4))
+            print(bboxes.shape)
             start_idx = 0
             offset = 0
 
@@ -65,8 +66,14 @@ class BMLBBoxGenerator(BBoxGenerator):
 
                 # batch frames
                 batch_results = self.generate_batched_bboxes(np_frames, offset)
-                for result in batch_results:
-                    bboxes.append(result.copy())
+                # print("bbox", bboxes.shape)
+                # print(batch_results)
+
+                npBatch = np.squeeze(np.array(batch_results.copy()))
+
+
+                bboxes[start_idx:end_idx, :] = npBatch
+                progress_bar.update(end_idx - start_idx)
 
                 progress_bar.update(end_idx - start_idx)
 

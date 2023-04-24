@@ -86,6 +86,8 @@ class BMLBBoxGenerator(BBoxGenerator):
 
         bboxTable = {}
         for file in files:
+            if "all" in file:
+                continue
             subject = int(file.split("/")[-1].split("_")[0])
             cameraType = file.split("/")[-1].split("_")[1]
             if subject not in bboxTable:

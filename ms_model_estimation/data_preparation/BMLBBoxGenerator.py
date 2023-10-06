@@ -42,6 +42,44 @@ class BMLBBoxGenerator(BBoxGenerator):
         path = path.replace("_img.hdf5", "_bbox.npy")
         np.save(path, bboxes)
 
+    def generate_batched_bbox(self, path, batchsize=1):
+
+        with h5py.File(path, 'r') as f:
+
+            numFrames = f["numFrames"][0]
+            name = f["name"][0]
+            bboxes = np.zeros((numFrames, 4))
+            print(bboxes.shape)
+            start_idx = 0
+            offset = 0
+
+            progress_bar = tqdm(total=numFrames)
+            while start_idx < numFrames:
+                end_idx = min(start_idx + batchsize, numFrames)
+                # check frames
+                frames = []
+                for i in range(start_idx, end_idx):
+                    frame, offset = BBoxGenerator.check_ImgSize(f["images"][i, :, :, :])
+                    frames.append(frame)
+
+                np_frames = np.array(frames)
+
+                # batch frames
+                batch_results = self.generate_batched_bboxes(np_frames, offset)
+                # print("bbox", bboxes.shape)
+                # print(batch_results)
+
+                npBatch = np.squeeze(np.array(batch_results.copy()))
+
+
+                bboxes[start_idx:end_idx, :] = npBatch
+                progress_bar.update(end_idx - start_idx)
+
+                progress_bar.update(end_idx - start_idx)
+
+        path = path.replace("_img.hdf5", "_bbox.npy")
+        np.save(path, bboxes)
+
     def generate(self):
 
         files = glob(self.hdf5Folder + "*_*_img.hdf5")
@@ -55,6 +93,8 @@ class BMLBBoxGenerator(BBoxGenerator):
 
         bboxTable = {}
         for file in files:
+            if "all" in file:
+                continue
             subject = int(file.split("/")[-1].split("_")[0])
             cameraType = file.split("/")[-1].split("_")[1]
             if subject not in bboxTable:

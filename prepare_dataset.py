@@ -63,15 +63,16 @@ if __name__ == "__main__":
     ## Generate HDF dataset
     # Extact images to .hdf5 files
     print("Extracting video frames into HDF files")
-    for videoPath in videoFolder.glob('*.avi'):
-        extract_frame_from_video(videoPath, Path(outputFolder))
+    # for videoPath in videoFolder.glob('*.avi'):
+    #     extract_frame_from_video(videoPath, Path(outputFolder))
 
     # Generate Bounding boxes
     print("Generate Bounding boxes for each video frame")
     generator = BMLBBoxGenerator(outputFolder)
     files = generator.generate()
     for f in tqdm(files):
-        generator.generate_bbox_from_video(f)
+        # generator.generate_bbox_from_video(f)
+        generator.generate_batched_bbox(f, 20)
     generator.collect_all_bbox()
 
     # Generate movement index file
